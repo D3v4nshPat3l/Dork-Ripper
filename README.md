@@ -1,20 +1,28 @@
-# 🔍 Dork Ripper (12,000+ Dorks)
+# Dork Ripper (12,000+ Dorks)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Dorks-12%2C043-blue?style=for-the-badge&logo=google" alt="Dorks Count">
+<p align="center">
+  <img src="assets/dork-ripper-hero.svg" alt="Dork Ripper - 12,000+ Categorized Search Dorks" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Dorks-12%2C043-blue?logo=google&style=for-the-badge" alt="Dorks Count">
   <img src="https://img.shields.io/badge/Files-47-orange?style=for-the-badge" alt="Files">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
-</div>
+</p>
 
-<br/>
-
-A comprehensive, modular, and massive repository of over **12,000 unique Google Dorks**, specifically designed to aid in security assessments, ethical hacking, bug bounty hunting, and threat intelligence.
-
-This repository consolidates highly targeted search parameters to discover exposed panels, credentials, sensitive documents, vulnerable servers, IoT devices, and much more. It includes the complete Exploit-DB Google Hacking Database (GHDB) and specialized categories.
+A comprehensive, modular, and massive repository of over **12,000 unique Google Dorks**, specifically designed to aid in security assessments, ethical hacking, bug bounty hunting, and threat intelligence. This repository consolidates highly targeted search parameters to discover exposed panels, credentials, sensitive documents, vulnerable servers, IoT devices, and much more. It includes the complete Exploit-DB Google Hacking Database (GHDB) and specialized categories.
 
 ---
 
-## 🛠️ Search Operators
+## ✨ Visual Preview
+
+<p align="center">
+  <img src="assets/dork-ripper-categories.svg" alt="Dork Ripper Categories" width="100%">
+</p>
+
+---
+
+## ️ Search Operators
 
 | Operator | Description | Syntax | Example |
 | :--- | :--- | :--- | :--- |
@@ -60,7 +68,7 @@ This repository consolidates highly targeted search parameters to discover expos
 
 ---
 
-## 🔧 URL Modifiers
+## URL Modifiers
 
 Add the parameter at the end of the SERP (Search Engine Result Pages) URL.
 
@@ -83,7 +91,7 @@ Add the parameter at the end of the SERP (Search Engine Result Pages) URL.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 ├── Docs/
@@ -98,7 +106,8 @@ Add the parameter at the end of the SERP (Search Engine Result Pages) URL.
 │   ├── Cross_Site_Scripting.txt
 │   ├── Cryptocurrency_And_Blockchain.txt
 │   ├── Exposed_Directories.txt
-│   ├── ... (and many more custom categories)
+│   ├── ...
+│   ├── (and many more custom categories)
 │   └── ExploitDb-Dorks/
 │       ├── Advisories_And_Vulnerabilities.txt
 │       ├── Files_Containing_Juicy_Info.txt
@@ -107,8 +116,24 @@ Add the parameter at the end of the SERP (Search Engine Result Pages) URL.
 │       └── ... (Complete GHDB Archive)
 ```
 
+---
+
+## ⚠️ Authorized Use Warning
+
+<p align="center">
+  <img src="assets/dork-ripper-warning.svg" alt="Dork Ripper Authorized Use Warning" width="100%">
+</p>
+
+Unauthorized use is illegal and unethical. Do not target third-party systems without permission. Use this repository only in legal, ethical, and authorized environments.
+
+---
+
 ## ⚠️ Disclaimer
 
-The information and materials provided in this repository are for **educational and research purposes only**. 
-Do not use these dorks against systems you do not own or have explicit authorization to test. 
+<p align="center">
+  <img src="assets/dork-ripper-disclaimer.svg" alt="Dork Ripper Disclaimer" width="100%">
+</p>
+
+The information and materials provided in this repository are for **educational and research purposes only**. Do not use these dorks against systems you do not own or have explicit authorization to test.
+
 The creator assumes no responsibility for any unauthorized or illegal activity conducted using the contents of this repository. Stay ethical and hack responsibly.
