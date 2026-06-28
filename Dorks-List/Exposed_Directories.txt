@@ -1,0 +1,181 @@
+# ============================================================
+# EXPOSED DIRECTORIES & DIRECTORY LISTINGS
+# Dorks for finding open directory listings, exposed folders,
+# and browsable file trees on web servers
+# ============================================================
+
+# --- General Directory Listings ---
+intitle:"index of" "parent directory"
+intitle:"Index of" "parent directory"
+intitle:"index of /"
+intitle:index.of
+intitle:"Browse Directory"
+intext:"index of" "parent directory"
+
+# --- Admin Directories ---
+intitle:"index of" /admin
+intitle:"Index of" inurl:/admin
+"Index of /admin"
+intitle:"index of" /administrator
+intitle:"index of" /panel
+intitle:"index of" /cpanel
+intitle:"index of" /manager
+
+# --- Backup Directories ---
+intitle:"index of" /backup
+intitle:"Index of" inurl:/backup
+intitle:"index of" /backups
+intitle:"index of" "backup.zip"
+intitle:"index of" "backup.tar"
+intitle:"index of" "backup.tar.gz"
+intitle:"index of" "backup.sql"
+intitle:"index of" /bak
+"Index of /backup"
+
+# --- Config Directories ---
+intitle:"index of" /config
+intitle:"Index of" inurl:/config
+intitle:"index of" /conf
+intitle:"index of" /etc
+intitle:"index of" /settings
+intitle:"index of" ".env"
+"Index of" inurl:config inurl:production
+
+# --- Database Directories ---
+intitle:"index of" /db
+intitle:"index of" /database
+intitle:"index of" /sql
+intitle:"index of" "database.sql"
+"index of" "database.sql.zip"
+"index of" "database_log"
+"Index of" "database.sql"
+
+# --- Log Directories ---
+intitle:"index of" /logs
+intitle:"Index of" inurl:/logs
+intitle:"index of" /log
+intitle:"index of" "access.log"
+intitle:"index of" "error.log"
+intitle:"index of" "debug.log"
+
+# --- Private & Sensitive Directories ---
+intitle:"index of" /private
+intitle:"index of" /secret
+intitle:"index of" /secure
+intitle:"index of" /confidential
+intitle:"index of" /internal
+intitle:"index of" /hidden
+"index of /private" -site:net -site:com -site:org
+"index of /private" site:mil
+
+# --- Upload Directories ---
+intitle:"index of" /uploads
+intitle:"index of" /upload
+intitle:"index of" /files
+intitle:"index of" /documents
+intitle:"index of" /media
+intitle:"index of" /attachments
+intitle:"index of" /data
+
+# --- Source Code & Dev Directories ---
+intitle:"index of" /src
+intitle:"index of" /source
+intitle:"index of" /dev
+intitle:"index of" /test
+intitle:"index of" /staging
+intitle:"index of" /tmp
+intitle:"index of" /temp
+intitle:"index of" /cgi-bin
+"Index of" inurl:htdocs inurl:xampp
+
+# --- Version Control Directories ---
+intitle:"index of" /.git
+intitle:"index of" /.svn
+intitle:"index of" /.hg
+intitle:"index of" /.bzr
+intitle:"index of" /git
+intitle:"index of" /svn
+".git" intitle:"Index of"
+
+# --- FTP & File Sharing ---
+intitle:"index of" /ftp
+intitle:"index of" /pub
+intitle:"index of" /incoming
+intitle:"index of" /shared
+"Parent Directory" "Last modified" ftp
+"/FTPSVC2" intitle:"index of"
+
+# --- Email Directories ---
+intitle:"index of" /mail
+intitle:"index of" /email
+intitle:"index of" /mbox
+"Index of /mail"
+
+# --- Network & System Directories ---
+"Index Of /network" "last modified"
+intitle:"index of" /var
+intitle:"index of" /root
+intitle:"index of" /home
+"index of" inurl:root intitle:symlink
+"index of" inurl:sym
+
+# --- Cloud Storage Directories ---
+"Last modified" intitle:"index of" "dropbox"
+"description" "size" intitle:"index of" "owncloud"
+
+# --- CMS Specific Directories ---
+intitle:"index of" /wp-content
+intitle:"index of" /wp-content/uploads
+intitle:"index of" /wp-content/plugins
+intitle:"index of" /wp-content/themes
+intitle:"index of" /wp-includes
+intitle:"index of" /wp-content/uploads/backupbuddy_backups
+"Index of /wp-content/uploads/backupbuddy_backups" zip
+intitle:"index of" /sites/default/files
+intitle:"index of" /joomla
+intitle:"index of" /drupal
+intitle:"index of" /magento
+
+# --- Webserver Specific ---
+"Directory Listing for" "Hosted by Xerver"
+"dirLIST - PHP Directory Lister"
+"Proudly Served by LiteSpeed Web Server" intitle:index.of./
+"httpd+ssl/kttd" server at intitle:index.of
+"Microsoft-IIS/*" intitle:index.of
+"Microsoft-IIS/4.0" intitle:index.of
+"Microsoft-IIS/5.0 server at"
+"Microsoft-IIS/6.0" intitle:index.of
+"JRun Web Server" intitle:index.of
+"AnWeb/1.42h" intitle:index.of
+"OmniHTTPd/2.10" intitle:index.of
+"OpenSA/1.0.4" intitle:index.of
+"MaXX/3.1" intitle:index.of
+
+# --- Specific File Indexes ---
+intitle:"index of" "database.properties"
+intitle:"Index of" inurl:/parent-directory
+"Index of" inurl:"/$Recycle.Bin/"
+"index of" inurl:recycler
+intitle:"index of" bigdump.php
+intitle:"index of" inurl:phpmyadmin
+"Index of" inurl:webalizer
+"Index of" rar r01 nfo Modified 2004
+"index of/" "ws_ftp.ini" "parent directory"
+
+# --- Desktop & Personal ---
+"Desktop" parent intitle:index.of
+"My Documents" "parent" intitle:index.of
+"My RoboForm Data" "index of"
+
+# --- OS Specific ---
+"[boot loader]" "WINNT" ext:ini
+"[LocalizedFileNames]" inurl:"desktop.ini" ext:ini -git -wiki
+"Netware * Home" inurl:nav.html
+"About Mac OS Personal Web Sharing"
+
+# --- Software & Application Dirs ---
+"ansible.log" OR "playbook.yaml" OR ".ansible.cfg" intitle:"index of"
+"Config" intitle:"Index of" intext:vpn
+"jos_users" intitle:"Index of"
+"index of" intext:fckeditor inurl:fckeditor
+intitle:"Index of /ThinkPHP" OR inurl:"/ThinkPHP/"

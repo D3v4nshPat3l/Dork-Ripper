@@ -1,0 +1,128 @@
+# ============================================================
+# CLOUD SERVICES & INFRASTRUCTURE
+# Dorks for finding exposed cloud storage, misconfigured
+# cloud services, and cloud infrastructure leaks
+# ============================================================
+
+# --- Amazon Web Services (AWS) ---
+site:amazonaws.com
+site:s3.amazonaws.com
+site:s3.amazonaws.com filetype:log
+site:s3.amazonaws.com filetype:txt
+site:s3.amazonaws.com filetype:xls
+site:s3.amazonaws.com filetype:pdf
+site:s3.amazonaws.com filetype:sql
+site:s3.amazonaws.com filetype:csv
+site:s3.amazonaws.com filetype:json
+site:s3.amazonaws.com filetype:xml
+site:s3.amazonaws.com "index of"
+site:s3.amazonaws.com intext:password
+site:s3.amazonaws.com intext:secret
+site:s3.amazonaws.com intext:credentials
+site:s3.amazonaws.com intext:backup
+site:s3.amazonaws.com intext:database
+s3 site:amazonaws.com filetype:log
+s3 site:amazonaws.com intext:dhcp filetype:txt inurl:apollo
+site:s3.amazonaws.com intitle:"index of"
+inurl:s3.amazonaws.com "AccessDenied"
+intext:"AWS_SECRET_ACCESS_KEY" filetype:env
+intext:"aws_access_key_id" filetype:env
+intext:"AKIAIOSFODNN7EXAMPLE"
+filetype:tf "aws_access_key"
+filetype:tf "aws_secret_key"
+filetype:tfvars "aws_"
+
+# --- Google Cloud Platform (GCP) ---
+site:storage.googleapis.com
+site:storage.googleapis.com filetype:sql
+site:storage.googleapis.com filetype:log
+site:storage.googleapis.com filetype:json
+site:storage.googleapis.com "index of"
+site:storage.googleapis.com intext:password
+site:storage.googleapis.com intext:backup
+site:console.cloud.google.com intext:password
+intext:"GOOGLE_APPLICATION_CREDENTIALS" filetype:env
+intext:"GCP_SERVICE_ACCOUNT" filetype:json
+filetype:json "client_secret" "client_id" "google"
+site:firebaseio.com
+site:firebaseio.com intext:password
+
+# --- Microsoft Azure ---
+site:blob.core.windows.net
+site:blob.core.windows.net filetype:sql
+site:blob.core.windows.net filetype:log
+site:blob.core.windows.net filetype:json
+site:blob.core.windows.net filetype:bak
+site:blob.core.windows.net intext:password
+site:blob.core.windows.net intext:backup
+site:blob.core.windows.net "index of"
+site:azurewebsites.net
+site:azurewebsites.net inurl:login
+intext:"AZURE_STORAGE_KEY" filetype:env
+intext:"AZURE_STORAGE_CONNECTION_STRING" filetype:env
+
+# --- DigitalOcean ---
+site:digitaloceanspaces.com
+site:digitaloceanspaces.com filetype:sql
+site:digitaloceanspaces.com filetype:log
+site:digitaloceanspaces.com intext:password
+
+# --- Alibaba Cloud ---
+site:oss-cn-*.aliyuncs.com
+site:aliyuncs.com filetype:sql
+site:aliyuncs.com filetype:log
+
+# --- Cloudflare ---
+"Access Denied" "Powered by Incapsula" ext:php
+"Application Blocked!" "Google bot"
+intext:"CF-Host-Origin-IP" "CF-RAY" -site:cloudflare.com
+
+# --- Docker & Container Registries ---
+intitle:"Docker Registry" inurl:v2/_catalog
+intitle:"Docker" inurl:registry
+site:hub.docker.com intext:password
+"MySQL_ROOT_PASSWORD:" "docker-compose" ext:yml
+intitle:"Portainer" inurl:login
+
+# --- Kubernetes ---
+intitle:"Kubernetes Dashboard" inurl:login
+intitle:"Kubernetes" inurl:dashboard
+inurl:"/api/v1/namespaces" "kubernetes"
+inurl:kubeconfig filetype:yaml
+
+# --- CI/CD Pipelines ---
+inurl:jenkins inurl:login
+intitle:"Jenkins" inurl:login
+intitle:"GitLab" inurl:login
+intitle:"Travis CI" inurl:login
+site:travis-ci.org intext:password
+site:circleci.com intext:password
+inurl:bamboo inurl:login
+intitle:"TeamCity" inurl:login
+
+# --- Cloud Databases ---
+inurl:".firebaseio.com" intext:password
+inurl:".firebaseio.com"
+inurl:".cloudfunctions.net"
+inurl:".cloudfront.net" filetype:log
+
+# --- Terraform & Infrastructure as Code ---
+filetype:tf "password"
+filetype:tf "secret"
+filetype:tfstate "password"
+filetype:tfvars "password"
+filetype:yaml "apiVersion" "kind" "metadata"
+
+# --- Serverless & Functions ---
+site:execute-api.amazonaws.com
+site:cloudfunctions.net
+site:azurewebsites.net inurl:api
+site:netlify.app inurl:admin
+
+# --- Monitoring & Logging ---
+inurl:app/kibana intext:"Loading Kibana"
+inurl:Dashboard.jspa intext:"Atlassian Jira Project Management Software"
+intitle:"Grafana" inurl:login
+intitle:"Prometheus" inurl:graph
+intitle:"Elasticsearch" inurl:_cluster
+intitle:"Graylog" inurl:login

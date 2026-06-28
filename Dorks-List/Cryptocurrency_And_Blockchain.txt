@@ -1,0 +1,93 @@
+# ============================================================
+# CRYPTOCURRENCY & BLOCKCHAIN DORKS
+# Dorks for finding exposed crypto wallets, keys, mining
+# configurations, and blockchain-related data
+# ============================================================
+
+# --- Cryptocurrency Wallet Exposure ---
+intext:"wallet.dat" filetype:dat
+intext:"bitcoin" "private key" filetype:txt
+intext:"ethereum" "private key" filetype:txt
+intext:"mnemonic" "seed phrase" filetype:txt
+intext:"recovery phrase" "12 words" filetype:txt
+intext:"recovery phrase" "24 words" filetype:txt
+intext:"bitcoin" "seed" filetype:txt -site:github.com
+intext:"crypto" "private_key" filetype:env
+intext:"BITCOIN_PRIVATE_KEY" filetype:env
+intext:"ETH_PRIVATE_KEY" filetype:env
+intext:"WALLET_SEED" filetype:env
+intext:"MNEMONIC" filetype:env
+filetype:json "bitcoin" "private"
+filetype:json "ethereum" "private"
+filetype:json "wallet" "keystore"
+
+# --- Exchange & Trading Platforms ---
+inurl:exchange "login" "bitcoin"
+inurl:exchange "login" "crypto"
+intitle:"exchange" "bitcoin" "login"
+intitle:"trading" "bitcoin" "login"
+intitle:"crypto" "exchange" "dashboard"
+intext:"binance" "api_key" filetype:env
+intext:"coinbase" "api_key" filetype:env
+intext:"BINANCE_API_KEY" filetype:env
+intext:"COINBASE_API_KEY" filetype:env
+intext:"KRAKEN_API_KEY" filetype:env
+
+# --- Mining Configurations ---
+intext:"mining" "pool" "worker" filetype:conf
+intext:"stratum+tcp://" filetype:conf
+intext:"mining" "hashrate" "pool" filetype:txt
+intext:"xmrig" filetype:json
+intext:"claymore" "mining" filetype:txt
+intitle:"Mining" "hashrate" "worker"
+intext:"pool" "wallet" "mining" filetype:cfg
+intext:"MINING_POOL" filetype:env
+inurl:mining inurl:dashboard
+
+# --- Blockchain Explorer & API ---
+inurl:blockchain.info
+inurl:etherscan.io
+inurl:bscscan.com
+inurl:blockexplorer
+inurl:explorer "blockchain"
+intext:"block height" "hash" "transactions"
+
+# --- Smart Contract & DeFi ---
+intext:"contract" "solidity" "pragma" filetype:sol
+intext:"INFURA_KEY" filetype:env
+intext:"ALCHEMY_API_KEY" filetype:env
+intext:"WEB3_PROVIDER" filetype:env
+site:etherscan.io inurl:address
+site:bscscan.com inurl:address
+intext:"metamask" "private key" filetype:txt
+
+# --- NFT & Token Exposure ---
+intext:"NFT" "contract address" "token"
+intext:"opensea" "api_key" filetype:env
+intext:"OPENSEA_API_KEY" filetype:env
+intext:"token" "contract" "mint" filetype:json
+
+# --- Crypto Payment Gateways ---
+intext:"STRIPE_SECRET" "crypto" filetype:env
+intext:"BITPAY_TOKEN" filetype:env
+intext:"COINPAYMENTS_KEY" filetype:env
+intext:"NOWPAYMENTS_API_KEY" filetype:env
+inurl:pay "bitcoin" "wallet address"
+inurl:donate "bitcoin" "address"
+inurl:payment "crypto" "wallet"
+
+# --- Crypto Forums & Leaks ---
+site:bitcointalk.org "password" "leaked"
+site:bitcointalk.org "wallet" "hack"
+site:reddit.com/r/Bitcoin "leaked"
+site:reddit.com/r/CryptoCurrency "hack"
+site:pastebin.com "bitcoin" "private key"
+site:pastebin.com "ethereum" "private key"
+site:pastebin.com "wallet" "seed"
+
+# --- Bug Bounty Crypto ---
+buy bitcoins "bug bounty"
+inurl:/bitcoin bug bounty
+inurl:btc security rewards
+"cryptocurrency" "bug bounty" "reward"
+"blockchain" "vulnerability" "reward"

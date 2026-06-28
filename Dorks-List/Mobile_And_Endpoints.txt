@@ -1,0 +1,96 @@
+# ============================================================
+# MOBILE APPLICATION & ENDPOINT EXPOSURE
+# Dorks for finding mobile app backends, API endpoints,
+# configuration files, and mobile-specific vulnerabilities
+# ============================================================
+
+# --- Mobile API Backends ---
+inurl:/api/v1/mobile
+inurl:/api/mobile/
+inurl:/mobile/api/
+inurl:mobileapi
+inurl:/api/app/
+inurl:/app/api/
+inurl:/m/api/
+intitle:"API" inurl:mobile
+
+# --- Android Specific ---
+filetype:apk inurl:download
+filetype:apk intitle:"index of"
+intitle:"index of" "release.apk"
+intitle:"index of" "app-release.apk"
+intitle:"index of" "debug.apk"
+intitle:"index of" "app-debug.apk"
+filetype:xml inurl:AndroidManifest
+filetype:json "google-services"
+filetype:json "project_info" "client_info" "api_key"
+site:play.google.com inurl:details?id=
+inurl:".apk" intitle:"index of"
+
+# --- iOS Specific ---
+filetype:plist inurl:Info
+filetype:ipa intitle:"index of"
+intitle:"index of" ".ipa"
+filetype:mobileprovision
+site:apps.apple.com inurl:app/
+
+# --- React Native / Flutter ---
+inurl:bundle.js "react-native"
+inurl:main.dart.js "flutter"
+filetype:json "react-native" "dependencies"
+
+# --- Firebase Mobile ---
+inurl:".firebaseio.com"
+filetype:json "firebase" "apiKey"
+filetype:json "google-services" "api_key"
+filetype:plist "FIREBASE_ANALYTICS"
+
+# --- Push Notification Endpoints ---
+inurl:fcm.googleapis.com
+inurl:onesignal.com/api
+inurl:pushwoosh.com
+inurl:pusher.com/api
+
+# --- Mobile Deep Links ---
+inurl:deeplink
+inurl:universallink
+inurl:app-link
+inurl:intent-filter
+
+# --- Mobile Backend as a Service ---
+site:parse.com
+site:back4app.com
+inurl:".parse.com"
+inurl:".back4app.com"
+
+# --- Cordova/PhoneGap ---
+inurl:cordova.js
+inurl:phonegap.js
+filetype:xml inurl:config.xml "cordova"
+
+# --- Mobile Config Files ---
+filetype:json "client_id" "client_secret" "mobile"
+filetype:plist "API_KEY"
+filetype:json "gcm_sender_id"
+filetype:json "mobilesdk_app_id"
+
+# --- Zoom & Video Conferencing ---
+inurl:zoom.us/j intext:"scheduled for"
+inurl:zoom.us/j/ "meeting"
+inurl:meet.google.com
+inurl:teams.microsoft.com/l/meetup-join
+intitle:"Zoom" inurl:login
+
+# --- Exposed Endpoints ---
+inurl:/health "status" "ok"
+inurl:/healthcheck
+inurl:/status.json
+inurl:/info.json
+inurl:/.well-known/
+inurl:/actuator
+inurl:/actuator/health
+inurl:/actuator/env
+inurl:/actuator/configprops
+inurl:/actuator/mappings
+inurl:/metrics
+inurl:/_debug

@@ -1,0 +1,177 @@
+# ============================================================
+# GAMING, ONION (DARK WEB) & SHOPPING DORKS
+# Dorks for gaming platforms, dark web content discovery,
+# and e-commerce/shopping platform vulnerabilities
+# ============================================================
+
+# =====================
+# GAMING DORKS
+# =====================
+
+# --- Game Server Discovery ---
+intitle:"Counter-Strike" "server status"
+intitle:"Minecraft" "server status"
+intitle:"ARK" "server" inurl:login
+intitle:"Rust" "server" inurl:login
+intitle:"Team Fortress" "server status"
+intitle:"Garry's Mod" "server"
+inurl:gameserver inurl:login
+inurl:game-panel inurl:login
+inurl:pterodactyl inurl:login
+intitle:"Pterodactyl" inurl:login
+
+# --- Gaming Platform Accounts ---
+site:steamcommunity.com "password"
+site:steamcommunity.com "leaked"
+site:epicgames.com inurl:login
+site:origin.com inurl:login
+site:battle.net inurl:login
+site:uplay.com inurl:login
+site:roblox.com inurl:login
+site:twitch.tv "password"
+site:discord.gg "gaming"
+
+# --- Game Databases & Configs ---
+filetype:cfg "server" "rcon_password"
+filetype:cfg "sv_password"
+filetype:ini "server" "admin password" "game"
+filetype:yaml "minecraft" "server" "password"
+filetype:properties "minecraft" "rcon.password"
+filetype:json "steam" "api_key"
+intext:"STEAM_API_KEY" filetype:env
+intext:"DISCORD_BOT_TOKEN" filetype:env
+
+# --- Game Panel Exposure ---
+intitle:"Multicraft" inurl:login
+intitle:"TCAdmin" inurl:login
+intitle:"GameCP" inurl:login
+intitle:"AMP" "Game Server" inurl:login
+"Powered by Multicraft" inurl:login
+"Powered by TCAdmin" inurl:login
+
+# --- ROM & Emulator Sites ---
+intitle:"index of" "roms"
+intitle:"index of" "Nintendo"
+intitle:"index of" "PlayStation"
+intitle:"index of" "GameBoy"
+intitle:"index of" "SNES"
+intitle:"index of" "N64"
+intitle:"index of" "GBA"
+intitle:"index of" "NDS"
+intitle:"index of" "emulator"
+intitle:"index of" "ISO" "games"
+
+# --- Cheat & Hack Sites ---
+inurl:cheat inurl:game "download"
+intitle:"game hack" "download"
+"game trainer" "download" filetype:exe
+
+# =====================
+# ONION / DARK WEB DORKS
+# =====================
+
+# --- Tor Hidden Services ---
+site:.onion
+inurl:.onion
+intext:".onion" "hidden service"
+intext:".onion" "tor" "marketplace"
+intext:".onion" "forum" "tor"
+
+# --- Dark Web Directories ---
+"hidden wiki" ".onion"
+"deep web links" ".onion"
+"onion links" "directory"
+"tor directory" ".onion" "links"
+"dark web" "directory" ".onion"
+"onion list" "links" "hidden"
+intitle:"Hidden Wiki" intext:".onion"
+intitle:"Onion Links" intext:".onion"
+
+# --- Dark Web Search Engines ---
+"Ahmia" ".onion" "search"
+"Torch" ".onion" "search"
+"DuckDuckGo" ".onion"
+"not Evil" ".onion" "search"
+"Candle" ".onion" "search engine"
+"Haystak" ".onion" "search"
+
+# --- Tor Relay Information ---
+"Tor relay" "bandwidth"
+"Tor bridge" "obfs4"
+"Tor exit node" "ip"
+site:metrics.torproject.org
+site:atlas.torproject.org
+
+# --- Dark Web Intelligence ---
+"dark web" "monitoring" "threat intelligence"
+"dark web" "data breach" "leaked"
+"darknet" "marketplace" "vendor"
+"darknet" "forum" "credentials"
+intext:"onion" "login" "register" "market"
+
+# --- I2P Network ---
+intext:".i2p" "eepsite"
+"i2p" "network" "router console"
+"i2p" "hidden service"
+
+# =====================
+# SHOPPING / E-COMMERCE DORKS
+# =====================
+
+# --- Shopping Cart Vulnerabilities ---
+inurl:cart.php "add to cart"
+inurl:shop.php "add to cart"
+inurl:store.php "add to cart"
+inurl:checkout "order" "payment"
+inurl:basket "checkout" "payment"
+inurl:shopping-cart "proceed to checkout"
+
+# --- Payment Page Exposure ---
+inurl:payment "credit card" "cvv"
+inurl:checkout "card number" "expiry"
+inurl:order "billing" "shipping" "payment"
+intext:"credit card" "expiration" "cvv" inurl:checkout
+intext:"payment" "card number" filetype:log
+
+# --- E-Commerce Admin Panels ---
+inurl:admin "products" "orders" "customers" "shop"
+inurl:administrator "orders" "products" "shop"
+intitle:"admin" "orders" "e-commerce"
+intitle:"Store Manager" inurl:login
+intitle:"Shop Admin" inurl:login
+
+# --- E-Commerce Platform Specific ---
+intitle:"Shopify" inurl:admin
+"Powered by Shopify" inurl:admin
+intitle:"WooCommerce" inurl:admin
+intitle:"BigCommerce" inurl:admin
+intitle:"Squarespace" inurl:admin
+intitle:"Wix" inurl:admin
+inurl:admin "Magento" "Dashboard"
+inurl:admin "PrestaShop" "Dashboard"
+inurl:admin "OpenCart" "Dashboard"
+alegrocart
+"Bu Site Ticimax E-Ticaret"
+"CosmoShop by Zaunz Publishing"
+"eCommerce Engine © 2006 xt:Commerce Shopsoftware"
+
+# --- Shopping Data Leaks ---
+filetype:sql "orders" "customers" "products"
+filetype:csv "order" "total" "customer" "email"
+filetype:xls "orders" "customers" "payment"
+filetype:json "orders" "customers" "products"
+filetype:sql "credit_card" "expiry"
+filetype:log "payment" "transaction" "card"
+
+# --- Coupon & Discount Exposure ---
+inurl:coupon "admin" "code" "discount"
+inurl:promo "admin" "code" "discount"
+filetype:csv "coupon" "discount" "code"
+filetype:xls "coupon" "discount" "code"
+intext:"coupon code" "discount" filetype:txt
+
+# --- Product Database Exposure ---
+filetype:sql "products" "price" "inventory"
+filetype:csv "product" "sku" "price" "stock"
+filetype:xls "inventory" "product" "quantity"
+inurl:export "products" filetype:csv

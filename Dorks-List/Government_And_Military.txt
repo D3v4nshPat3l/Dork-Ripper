@@ -1,0 +1,108 @@
+# ============================================================
+# GOVERNMENT & MILITARY TARGETS
+# Dorks for finding sensitive data on government and military
+# domains - for authorized research only
+# ============================================================
+
+# --- Government Document Discovery ---
+site:gov filetype:pdf "confidential"
+site:gov filetype:pdf "restricted"
+site:gov filetype:pdf "for official use only"
+site:gov filetype:pdf "not for public release"
+site:gov filetype:doc "confidential"
+site:gov filetype:docx "confidential"
+site:gov filetype:xls "confidential"
+site:gov filetype:xlsx "confidential"
+site:gov filetype:pdf "Declassified and Approved for Release"
+allintitle:restricted filetype:doc site:gov
+"keyed alike" site:gov filetype:pdf
+
+# --- Government Login Panels ---
+site:gov inurl:login
+site:gov inurl:admin
+site:gov inurl:dashboard
+site:gov intitle:"login"
+site:gov intitle:"admin"
+"department" "agency" "government" intitle:"login form"
+
+# --- Government Databases ---
+site:gov filetype:sql
+site:gov filetype:mdb
+site:gov filetype:csv "password"
+site:gov filetype:xls "password"
+site:gov filetype:env
+site:gov inurl:phpmyadmin
+
+# --- Government Directory Listings ---
+site:gov intitle:"index of"
+site:gov intitle:"index of" /admin
+site:gov intitle:"index of" /backup
+site:gov intitle:"index of" /config
+site:gov intitle:"index of" /private
+
+# --- Military Domains ---
+site:mil filetype:pdf "confidential"
+site:mil filetype:pdf "restricted"
+site:mil filetype:pdf "classified"
+site:mil filetype:pdf "secret"
+site:mil intitle:"index of"
+site:mil intitle:"login"
+site:mil inurl:admin
+"index of /private" site:mil
+
+# --- Government Emails & PII ---
+site:gov filetype:xls "email" "phone"
+site:gov filetype:csv "email" "phone"
+site:gov filetype:xls "SSN"
+site:gov filetype:csv "address" "phone"
+
+# --- Government Infrastructure ---
+site:gov inurl:vpn
+site:gov inurl:webmail
+site:gov inurl:remote
+site:gov inurl:citrix
+site:gov inurl:owa
+site:gov inurl:portal
+site:gov inurl:gateway
+site:gov inurl:outlook
+site:gov inurl:exchange
+
+# --- Education Domains ---
+site:edu filetype:pdf "confidential"
+site:edu filetype:sql
+site:edu filetype:env
+site:edu inurl:admin
+site:edu inurl:login
+site:edu inurl:phpmyadmin
+site:edu intitle:"index of"
+site:edu intitle:"index of" /backup
+inurl:".php?id=" site:edu
+"Umbraco" inurl:"#/login" site:edu
+
+# --- International Government ---
+site:gov.uk filetype:pdf "confidential"
+site:gov.au filetype:pdf "confidential"
+site:gov.in filetype:pdf "confidential"
+site:gov.br filetype:pdf "confidential"
+site:gc.ca filetype:pdf "confidential"
+site:gov.za filetype:pdf "restricted"
+site:nic.in inurl:login
+
+# --- Public Records & FOIA ---
+site:gov filetype:pdf "FOIA"
+site:gov filetype:pdf "Freedom of Information"
+site:gov "public records"
+site:gov "court records" filetype:pdf
+site:gov "case file" filetype:pdf
+
+# --- Government Cloud ---
+site:gov site:amazonaws.com
+site:gov site:azure.com
+site:gov site:googleapis.com
+
+# --- Municipal & Local Government ---
+site:*.gov inurl:minutes filetype:pdf
+site:*.gov inurl:agenda filetype:pdf
+site:*.gov "budget" filetype:xls
+site:*.gov "salary" filetype:csv
+site:*.gov "employee" filetype:xls

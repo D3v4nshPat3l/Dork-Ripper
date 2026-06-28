@@ -1,0 +1,127 @@
+# ============================================================
+# SUBDOMAIN & DOMAIN RECONNAISSANCE
+# Dorks for subdomain enumeration, domain intelligence,
+# and DNS-related information gathering
+# ============================================================
+
+# --- Subdomain Enumeration ---
+site:*.example.com
+site:*.*.example.com
+site:dev.example.com
+site:staging.example.com
+site:test.example.com
+site:beta.example.com
+site:alpha.example.com
+site:qa.example.com
+site:uat.example.com
+site:demo.example.com
+site:sandbox.example.com
+site:pre.example.com
+site:preprod.example.com
+site:internal.example.com
+site:intranet.example.com
+site:vpn.example.com
+site:remote.example.com
+site:api.example.com
+site:admin.example.com
+site:portal.example.com
+site:secure.example.com
+site:auth.example.com
+site:sso.example.com
+site:mail.example.com
+site:webmail.example.com
+site:owa.example.com
+site:exchange.example.com
+site:ftp.example.com
+site:cdn.example.com
+site:assets.example.com
+site:static.example.com
+site:media.example.com
+site:images.example.com
+site:docs.example.com
+site:wiki.example.com
+site:support.example.com
+site:help.example.com
+site:status.example.com
+site:monitor.example.com
+site:grafana.example.com
+site:jenkins.example.com
+site:gitlab.example.com
+site:jira.example.com
+site:confluence.example.com
+site:kibana.example.com
+site:elastic.example.com
+
+# --- Negative Search (Target Exclusion) ---
+site:example.com -www
+site:example.com -www -mail -webmail
+site:example.com -site:www.example.com
+
+# --- Infrastructure Discovery ---
+site:example.com inurl:admin
+site:example.com inurl:login
+site:example.com inurl:dashboard
+site:example.com inurl:debug
+site:example.com inurl:staging
+site:example.com inurl:dev
+site:example.com inurl:test
+site:example.com inurl:api
+site:example.com inurl:internal
+site:example.com inurl:config
+
+# --- Cloud Infrastructure ---
+site:example.com site:amazonaws.com
+site:example.com site:blob.core.windows.net
+site:example.com site:storage.googleapis.com
+site:example.com site:azurewebsites.net
+site:example.com site:cloudfront.net
+site:example.com site:herokuapp.com
+site:example.com site:netlify.app
+site:example.com site:vercel.app
+site:example.com site:firebaseapp.com
+site:example.com site:appspot.com
+site:example.com site:pages.dev
+site:example.com site:workers.dev
+
+# --- Related Domain Discovery ---
+intext:"example.com" site:whois.domaintools.com
+intext:"example.com" site:dnsdumpster.com
+intext:"example.com" site:securitytrails.com
+intext:"example.com" site:censys.io
+intext:"example.com" site:crt.sh
+
+# --- Certificate Transparency ---
+site:crt.sh "example.com"
+inurl:crt.sh inurl:q=example.com
+
+# --- DNS Records ---
+filetype:zone "example.com"
+filetype:txt "IN SOA" "example.com"
+filetype:txt "IN MX" "example.com"
+
+# --- Sensitive Subdomains ---
+inurl:jira.example.com
+inurl:confluence.example.com
+inurl:jenkins.example.com
+inurl:gitlab.example.com
+inurl:sonar.example.com
+inurl:nexus.example.com
+inurl:grafana.example.com
+inurl:kibana.example.com
+inurl:prometheus.example.com
+
+# --- Employee/User Discovery ---
+site:example.com "contact" "email"
+site:example.com intitle:"staff" OR intitle:"team"
+site:example.com intitle:"directory"
+site:example.com "@example.com"
+site:linkedin.com "example.com"
+site:github.com "example.com"
+
+# --- Technology Fingerprinting ---
+site:example.com "powered by"
+site:example.com "built with"
+site:example.com inurl:readme
+site:example.com inurl:changelog
+site:example.com filetype:xml
+site:example.com filetype:json

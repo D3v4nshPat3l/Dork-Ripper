@@ -1,0 +1,169 @@
+# ============================================================
+# VULNERABLE WEB SERVERS & TECHNOLOGIES
+# Dorks targeting specific web server versions, CMS platforms,
+# and software known to have vulnerabilities
+# ============================================================
+
+# --- Apache Vulnerabilities ---
+intitle:"Test Page for Apache" "It Works!"
+allintitle:"Test page for Apache Installation"
+intitle:"Apache Status" "Apache Server Status"
+intitle:"Apache" "server-status"
+inurl:server-status "Apache"
+inurl:server-info "Apache Server Information"
+"OpenSSL" AND "1.0.1 Server at" OR "1.0.1a Server at" OR "1.0.1b Server at" OR "1.0.1c Server at" OR "1.0.1d Server at" OR "1.0.1e Server at" OR "1.0.1f Server at"
+"Powered by Apache Subversion version"
+
+# --- Nginx Misconfigurations ---
+intitle:"Welcome to nginx" inurl:server
+"nginx" "server_tokens on" intitle:"index of"
+
+# --- IIS Vulnerabilities ---
+intitle:"IIS Windows Server" "Under Construction"
+"Microsoft-IIS/5.0 server at"
+"Microsoft-IIS/6.0" intitle:index.of
+intitle:"IIS" inurl:iisstart
+
+# --- PHP Info Exposure ---
+inurl:phpinfo.php
+inurl:phpinfo.php intitle:"phpinfo()"
+"PHP Version" inurl:/php/phpinfo.php
+"PHP Credits" "Configuration" "PHP Core" ext:php inurl:info
+"phpinfo.php" -manual
+"PHP Version" intitle:"phpinfo()"
+"allow_call_time_pass_reference" "PATH_INFO"
+
+# --- WordPress Vulnerabilities ---
+inurl:wp-login.php
+inurl:xmlrpc.php "XML-RPC server accepts POST requests only"
+inurl:wp-content/debug.log
+inurl:wp-admin/install.php
+inurl:wp-config.php.bak
+inurl:wp-json/wp/v2/users
+intitle:"WordPress" inurl:readme.html
+intitle:"Index of" inurl:wp-json/oembed
+intitle:"Index of" wp-admin
+"is proudly powered by WordPress"
+"/wp-admin/admin-ajax" ext:txt
+"error_log" inurl:/wp-content
+inurl:/wp-content/uploads/shell.php
+
+# --- Joomla Vulnerabilities ---
+inurl:index.php?option=com_
+inurl:com_jce "Joomla"
+inurl:com_fabrik "Joomla"
+inurl:com_adsmanager "Joomla"
+intitle:"Joomla" inurl:administrator/index.php
+"Joomla! Administration Login"
+"Consola de Joomla! Debug" inurl:index.php
+"index.php?option=com_chronoconnectivity"
+"index.php?option=com_chronocontact"
+"index.php?option=com_expose"
+"index.php?option=com_mdigg"
+"index.php?option=com_news_portal"
+"index.php?option=com_qcontacts"
+"index.php?option=com_resman"
+"index.php?option=com_rwcards"
+"index.php?option=com_sef"
+"index.php?option=com_seyret"
+"com_joom12pic"
+"com_joomlaflashfun"
+"com_lmo"
+
+# --- Drupal Vulnerabilities ---
+inurl:node/add "Drupal"
+inurl:user/register "Drupal"
+inurl:/?q=user/password "Drupal"
+inurl:/CHANGELOG.txt "Drupal"
+
+# --- phpMyAdmin ---
+inurl:phpmyadmin/index.php
+inurl:phpmyadmin login
+intitle:"phpMyAdmin" "Welcome to phpMyAdmin"
+"phpMyAdmin" "running on" inurl:"main.php"
+intitle:"Index of" phpmyadmin
+
+# --- Database Management ---
+intitle:"Adminer" inurl:adminer
+inurl:adminer.php "login"
+allinurl:moadmin.php -google -github
+"FrontAccounting"
+
+# --- Vulnerable CMS & Apps ---
+"2005 SugarCRM Inc. All Rights Reserved" "Powered By SugarCRM"
+"Content managed by the Etomite Content Management System"
+"Powered by AJ-Fork v.167"
+"Powered by Ajax Portal 3.0"
+"Powered by 0DayDB v2.3"
+"DeeEmm CMS"
+"Aurora CMS"
+"CMS Webmanager-pro"
+"cms SunLight 5.2"
+"Personal .NET Portal"
+"Powered by Xpoze"
+"Powered by Pie Cart Pro"
+"Powered by JTL-Shop 2"
+"MidCart PHP Database Management"
+"More Info about MetaCart Free"
+"Online Store - Powered by ProductCart"
+"Copyright MaxiSepet ©"
+"eCommerce Engine © 2006 xt:Commerce Shopsoftware"
+"ATutor 1.6.4"
+"Based on DoceboLMS 2.0"
+"Cyphor (Release:" -www.cynox.ch
+"Ideal BB Version: 0.1" -idealbb.com
+"pForum 1.29a" OR "Powie's PSCRIPT Forum 1.26"
+"pForum 1.30"
+
+# --- E-Commerce Platforms ---
+intitle:"Magento" inurl:downloader
+intitle:"PrestaShop" inurl:admin
+intitle:"OpenCart" inurl:admin
+intitle:"osCommerce" inurl:admin
+intitle:"ZenCart" inurl:admin
+alegrocart
+"Bu Site Ticimax E-Ticaret"
+
+# --- Webshells & Backdoors ---
+"index of" /wp-content/uploads/shell.php
+"File Manager - Current disk free"
+"File Manager Version 1.0" "Coded By"
+"File Upload Manager v1.3" "rename to"
+"Instant Free File Uploader"
+"Fenix Final Version v2.0" filetype:php
+"El Moujahidin Bypass Shell" ext:php
+"CGI-Telnet Unit-x Team Connected to"
+"[ phpinfo ] [ php.ini ] [ cpu ] [ mem ] [ users ] [ tmp ] [ delete ]"
+"PHP Mailer" "priv8 Mailer" ext:php
+"Installed Objects Scanner" inurl:default.asp
+
+# --- Vulnerable Web Servers ---
+"CERN httpd 3.0B (VAX VMS)"
+"Build ref: 26"
+intitle:"Welcome to the Cyclades"
+"Emergisoft web applications are a part of our"
+"I have been invoked by servletToJSP"
+
+# --- Framework Debug/Info ---
+"CakeRoutingException" -site:github.com -site:stackoverflow.com
+"dispatch=debugger."
+"Internal Server Error" "server at"
+"error found handling the request" cocoon filetype:xml
+inurl:"error" intitle:"exception" intitle:"failure"
+"database error" "SQL syntax" "undefined index"
+"unhandled exception" "stack trace"
+
+# --- Docker & Container Exposure ---
+"MySQL_ROOT_PASSWORD:" "docker-compose" ext:yml
+inurl:portainer login
+intitle:"Portainer" inurl:login
+intitle:"Docker" "registry" inurl:v2
+intitle:"Kubernetes Dashboard" inurl:login
+
+# --- Git & Version Control Exposure ---
+intitle:"index of" ".git"
+inurl:"/.git/HEAD"
+inurl:"/.git/config"
+inurl:"/.svn/entries"
+inurl:"/.svn/wc.db"
+inurl:"/.hg/"

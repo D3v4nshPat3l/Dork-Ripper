@@ -1,0 +1,172 @@
+# ============================================================
+# SHODAN & CENSYS SEARCH ENGINE DORKS
+# Queries for Shodan, Censys, and other IoT/device search
+# engines to find exposed services and devices
+# ============================================================
+
+# --- Shodan Basic Searches ---
+# NOTE: These are Shodan queries, not Google dorks
+# Use at: https://www.shodan.io/
+port:22 "SSH"
+port:23 "Telnet"
+port:21 "FTP"
+port:25 "SMTP"
+port:80 "HTTP"
+port:443 "HTTPS"
+port:3306 "MySQL"
+port:5432 "PostgreSQL"
+port:27017 "MongoDB"
+port:6379 "Redis"
+port:9200 "Elasticsearch"
+port:11211 "Memcached"
+port:5900 "VNC"
+port:3389 "RDP"
+port:8080 "HTTP Proxy"
+port:8443 "HTTPS Alt"
+port:161 "SNMP"
+port:1433 "MSSQL"
+port:1521 "Oracle"
+port:389 "LDAP"
+port:636 "LDAPS"
+
+# --- Shodan Device Specific ---
+"Server: Apache" port:80
+"Server: nginx" port:80
+"Server: Microsoft-IIS" port:80
+"220" "FTP" port:21
+"SSH-2.0-OpenSSH" port:22
+"MongoDB Server Information" port:27017
+"Redis" port:6379
+"Elasticsearch" port:9200
+"RabbitMQ" port:15672
+"CouchDB" port:5984
+"Kibana" port:5601
+"Jenkins" port:8080
+"Grafana" port:3000
+"Prometheus" port:9090
+"Docker" port:2375
+"Kubernetes" port:6443
+
+# --- Shodan Webcam/Camera ---
+"webcam" has_screenshot:true
+"camera" has_screenshot:true
+"Server: yawcam" port:8080
+"Server: webcamXP"
+"Hikvision-Webs" port:80
+"DVRDVS-Webs"
+"Dahua" port:37777
+"D-Link" port:80 "camera"
+"Axis" port:80 "camera"
+"Vivotek" port:80 "camera"
+
+# --- Shodan ICS/SCADA ---
+port:502 "Modbus"
+port:47808 "BACnet"
+port:20000 "DNP3"
+port:1911 "Niagara Fox"
+port:2222 "EtherNet/IP"
+port:44818 "EtherNet/IP"
+port:4840 "OPC UA"
+port:102 "Siemens S7"
+"Rockwell Automation" port:44818
+"Schneider Electric" port:502
+"Siemens" port:102
+
+# --- Shodan VPN/Firewall ---
+"Cisco ASA" port:443
+"FortiGate" port:443
+"SonicWall" port:443
+"Palo Alto" port:443
+"OpenVPN" port:1194
+"WireGuard" port:51820
+"pfSense" port:443
+
+# --- Shodan Vulnerable Services ---
+"X-Powered-By: PHP/5."
+"X-Powered-By: PHP/4."
+"Apache/2.2."
+"Apache/2.0."
+"Microsoft-IIS/6.0"
+"Microsoft-IIS/5.0"
+"OpenSSL/1.0.1"
+"Server: Apache/2.4.49"
+"Server: Apache/2.4.50"
+vuln:CVE-2021-44228
+vuln:CVE-2021-26855
+vuln:CVE-2019-0708
+vuln:CVE-2017-0144
+
+# --- Shodan Database ---
+"MongoDB" "totalSize" port:27017
+"Redis" "redis_version" port:6379
+"Elasticsearch" "cluster_name" port:9200
+"CouchDB" "Welcome" port:5984
+"Memcached" port:11211
+
+# --- Censys Queries ---
+# NOTE: These are Censys queries
+# Use at: https://search.censys.io/
+services.port=22 and services.ssh.server_host_key.fingerprint_sha256=*
+services.port=80 and services.http.response.headers.server="Apache"
+services.port=443 and services.tls.certificates.leaf.subject.common_name=*
+services.port=3306 and services.banner="MySQL"
+services.port=5432 and services.banner="PostgreSQL"
+services.port=27017
+services.port=6379
+services.port=9200 and services.http.response.body="elasticsearch"
+services.port=8080 and services.http.response.body="Jenkins"
+services.port=8443 and services.http.response.body="Kubernetes"
+services.port=2375 and services.banner="Docker"
+services.port=5900
+services.port=3389
+services.port=502
+services.port=47808
+services.port=20000
+
+# --- Censys Certificate Searches ---
+parsed.names: "example.com"
+parsed.subject.common_name: "*.example.com"
+parsed.issuer.organization: "Let's Encrypt"
+parsed.fingerprint_sha256: ""
+
+# --- Censys Web Searches ---
+services.http.response.status_code=200 and services.http.response.body="admin"
+services.http.response.status_code=200 and services.http.response.body="login"
+services.http.response.status_code=200 and services.http.response.body="dashboard"
+services.http.response.status_code=200 and services.http.response.body="phpMyAdmin"
+
+# --- ZoomEye Queries ---
+# NOTE: These are ZoomEye queries
+# Use at: https://www.zoomeye.org/
+app:"Apache httpd"
+app:"nginx"
+app:"Microsoft IIS httpd"
+app:"MySQL"
+app:"MongoDB"
+app:"Redis"
+app:"Elasticsearch"
+app:"Jenkins"
+app:"WordPress"
+app:"Joomla"
+app:"phpMyAdmin"
+app:"Kubernetes"
+app:"Docker"
+app:"Grafana"
+
+# --- FOFA Queries ---
+# NOTE: These are FOFA queries
+# Use at: https://fofa.info/
+title="login" && country="US"
+title="admin" && country="US"
+title="dashboard" && country="US"
+app="WordPress"
+app="Joomla"
+app="phpMyAdmin"
+app="Jenkins"
+protocol="ssh"
+protocol="ftp"
+protocol="telnet"
+protocol="rdp"
+protocol="vnc"
+protocol="mysql"
+protocol="mongodb"

@@ -1,0 +1,148 @@
+# ============================================================
+# RFI (REMOTE FILE INCLUSION) & CARDING DORKS
+# Dorks for discovering RFI vulnerabilities and payment card
+# data security testing (authorized research only)
+# ============================================================
+
+# =====================
+# REMOTE FILE INCLUSION (RFI)
+# =====================
+
+# --- RFI Prone Parameters ---
+inurl:page= inurl:http
+inurl:include= inurl:http
+inurl:dir= inurl:http
+inurl:file= inurl:http
+inurl:path= inurl:http
+inurl:doc= inurl:http
+inurl:template= inurl:http
+inurl:style= inurl:http
+inurl:inc= inurl:http
+inurl:locate= inurl:http
+inurl:show= inurl:http
+inurl:site= inurl:http
+inurl:folder= inurl:http
+inurl:content= inurl:http
+inurl:module= inurl:http
+inurl:plugin= inurl:http
+inurl:source= inurl:http
+inurl:download= inurl:http
+inurl:load= inurl:http
+inurl:open= inurl:http
+
+# --- RFI Specific Patterns ---
+inurl:".php?page=http://"
+inurl:".php?file=http://"
+inurl:".php?include=http://"
+inurl:".php?path=http://"
+inurl:".php?template=http://"
+inurl:".php?content=http://"
+inurl:".php?module=http://"
+inurl:".php?doc=http://"
+inurl:".php?load=http://"
+inurl:".php?source=http://"
+
+# --- RFI in Known Applications ---
+"mosConfig_absolute_path" "include" inurl:http
+"GLOBALS[mosConfig_absolute_path]" inurl:http
+"mosConfig_live_site" inurl:http
+"_REQUEST" "include" inurl:http
+"_GET" "include" inurl:http
+"includes/include_once.php?include_file=" inurl:http
+"include_path=" inurl:http
+
+# --- RFI Joomla Components ---
+administrator/components/com_jce/jce.php?mosConfig_absolute_path=
+administrator/components/com_virtuemart/virtuemart_parser.php?mosConfig_absolute_path=
+administrator/components/com_joomla_flash_uploader/install.joomla_flash_uploader.php?mosConfig_absolute_path=
+administrator/components/com_joomlaboard/file_upload.php?sbp=
+components/com_facileforms/facileforms.frame.php?ff_compath=
+components/com_extended_registration/registration_detailed.inc.php?mosConfig_absolute_path=
+components/com_performs/performs.php?mosConfig_absolute_path=
+components/com_rsgallery/rsgallery.html.php?mosConfig_absolute_path=
+components/com_smf/smf.php?mosConfig_absolute_path=
+modules/mod_mainmenu.php?mosConfig_absolute_path=
+
+# --- RFI in WordPress ---
+inurl:wp-content/plugins/ inurl:http
+inurl:wp-includes/ inurl:http
+inurl:wp-content/themes/ inurl:http
+
+# --- RFI in phpBB ---
+inurl:phpbb inurl:http "includes"
+inurl:phpBB "includes" "include_path"
+
+# =====================
+# CARDING / PAYMENT CARD SECURITY TESTING
+# (For authorized PCI-DSS compliance testing only)
+# =====================
+
+# --- Credit Card Number Exposure ---
+filetype:log "credit card" "number"
+filetype:log "card number" "expiry" "cvv"
+filetype:txt "card number" "expiry" "cvv"
+filetype:xls "credit card" "expiry"
+filetype:csv "credit card" "number" "cvv"
+filetype:sql "credit_card" OR "cc_number"
+filetype:sql "card_number" "expiry_date" "cvv"
+
+# --- Payment Processing Logs ---
+filetype:log "payment" "authorize" "card"
+filetype:log "transaction" "approved" "card"
+filetype:log "charge" "credit card" "amount"
+filetype:log "billing" "card" "token"
+filetype:txt "PayPal" "transaction" "email"
+filetype:log "stripe" "charge" "customer"
+
+# --- PCI-DSS Compliance ---
+filetype:pdf "PCI DSS" "compliance" "report"
+filetype:pdf "PCI" "assessment" "card data"
+filetype:pdf "cardholder data" "scope"
+filetype:doc "PCI DSS" "self-assessment"
+"PA-DSS" filetype:pdf
+"PCI" "scan report" filetype:pdf
+
+# --- E-Commerce Payment Pages ---
+inurl:checkout "card number" "cvv"
+inurl:payment "billing" "credit card"
+inurl:order inurl:pay "card details"
+inurl:gateway "payment" "process"
+inurl:purchase "credit" "debit" "card"
+
+# --- Exposed Merchant Accounts ---
+filetype:env "STRIPE_SECRET_KEY"
+filetype:env "STRIPE_PUBLISHABLE_KEY"
+filetype:env "PAYPAL_CLIENT_SECRET"
+filetype:env "BRAINTREE_PRIVATE_KEY"
+filetype:env "SQUARE_ACCESS_TOKEN"
+filetype:env "AUTHORIZE_NET_LOGIN"
+filetype:env "AUTHORIZE_NET_KEY"
+filetype:env "RAZORPAY_KEY_SECRET"
+filetype:env "MERCHANT_KEY"
+filetype:env "PAYMENT_SECRET"
+
+# --- Shopping Cart Databases ---
+filetype:sql "cc_number" OR "card_number"
+filetype:sql "billing_address" "cc_exp"
+filetype:mdb "credit card"
+filetype:sql "customers" "orders" "cc_type"
+filetype:bak "credit_card" "expiry"
+
+# --- Exposed Transaction Data ---
+filetype:csv "transaction" "card" "amount"
+filetype:xls "transaction" "card" "amount"
+filetype:log "authorization" "card" "approved"
+"LGD_CARDNUM" ext:log
+filetype:log "payment_method" "card_brand"
+
+# --- VirusTotal Dorks ---
+# NOTE: These are for VirusTotal intelligence queries
+site:virustotal.com "detection" "malware"
+site:virustotal.com "hash" "detection"
+site:virustotal.com inurl:gui/file/
+site:virustotal.com inurl:gui/domain/
+site:virustotal.com inurl:gui/ip-address/
+site:virustotal.com inurl:gui/url/
+"virustotal" "api_key" filetype:env
+"VT_API_KEY" filetype:env
+"VIRUSTOTAL_API_KEY" filetype:env

@@ -1,0 +1,158 @@
+# ============================================================
+# ADMIN & LOGIN PANELS
+# Dorks for discovering exposed admin dashboards, login pages,
+# control panels, and management interfaces
+# ============================================================
+
+# --- Generic Admin Panels ---
+inurl:admin login
+inurl:admin/login
+inurl:admin/login.php
+inurl:admin/login.asp
+inurl:admin/login.aspx
+inurl:admin/login.html
+inurl:admin/login.htm
+inurl:admin/admin.php
+inurl:admin/admin.asp
+inurl:admin/index.php
+inurl:admin/index.asp
+inurl:admin/index.html
+inurl:admin_login
+inurl:admin_login.php
+inurl:admin_login.asp
+inurl:adminlogin
+inurl:adminlogin.php
+inurl:adminlogin.asp
+inurl:administrator/login
+inurl:administrator/login.php
+inurl:administrator/login.asp
+inurl:administrator.asp
+inurl:administratorlogin.asp
+inurl:adminhome.asp
+inurl:admin.asp
+inurl:admin.php
+intitle:"Admin Login"
+intitle:"admin login" inurl:admin
+intitle:"Control Panel" inurl:/admin
+intitle:"Control Panel" inurl:/login
+intitle:"Login Page" inurl:admin
+intitle:"Administrator Login"
+intitle:"Administration Login"
+intitle:"admin panel"
+intitle:login inurl:/admin
+intitle:login inurl:/administrator
+inurl:auth inurl:admin
+inurl:secure login inurl:admin
+
+# --- CPanel & Hosting ---
+inurl:cpanel
+inurl:cpanel/login
+inurl:cpanel login
+inurl:":2083" "cPanel"
+inurl:":2087" "WHM"
+inurl:webmail login
+inurl:plesk login
+intitle:"Plesk" "login"
+inurl:directadmin login
+intitle:"DirectAdmin" "login"
+
+# --- CMS Admin Panels ---
+inurl:wp-admin
+inurl:wp-login.php
+intitle:"WordPress" "wp-admin"
+"Joomla! Administration Login" inurl:"/index.php"
+inurl:administrator/index.php "Joomla"
+intitle:"Drupal" inurl:user/login
+inurl:typo3 login
+inurl:user/login "Drupal"
+inurl:magento/admin
+intitle:"Magento Admin" "login"
+"Log in" "Magento is a trademark of Magento Inc."
+inurl:shopify/admin
+intitle:"Shopify" "admin"
+
+# --- Dashboard Panels ---
+inurl:dashboard login
+inurl:dashboard/login
+intitle:"Dashboard" "login"
+intitle:"Dashboard" "sign in"
+inurl:panel login
+inurl:panel/login
+intitle:"panel" "login" "password"
+inurl:control login
+inurl:controlpanel login
+inurl:console login
+
+# --- Database Admin Panels ---
+inurl:phpmyadmin
+inurl:phpmyadmin/index.php
+intitle:"phpMyAdmin" inurl:phpmyadmin
+"phpMyAdmin" "running on" inurl:"main.php"
+intitle:"Index of" phpmyadmin
+intitle:"Adminer" inurl:adminer
+inurl:adminer.php
+inurl:pgadmin
+intitle:"pgAdmin" "login"
+
+# --- Webmail Panels ---
+inurl:webmail login
+inurl:mail login
+intitle:"Webmail" "login"
+inurl:roundcube login
+inurl:horde login
+inurl:squirrelmail login
+"IMail Server Web Messaging" intitle:login
+"IceWarp Web Mail" "Powered by IceWarp"
+"PHPWebAdmin for hMailServer" intitle:PHPWebAdmin -site:hmailserver.com
+
+# --- Server Management ---
+intitle:"Apache Tomcat" inurl:manager/html
+intitle:"IIS Windows Server" inurl:admin
+intitle:"Cisco Systems, Inc. VPN 3000 Concentrator"
+intitle:"iLO" "Firmware Version" ProLiant Login -hpe.com -update
+"Establishing a secure Integrated Lights Out session with"
+"APC Console Port Management Server" intitle:"Console Port Management Server"
+"Novell, Inc" WEBACCESS Username Password "Version *.*"
+intitle:"Webmin" inurl:10000
+"Login to Usermin" inurl:20000
+"Login - Sun Cobalt RaQ"
+
+# --- Specific Application Logins ---
+intitle:"login" inurl:signin.aspx
+inurl:userlogin
+inurl:login?redirect=
+inurl:login.cgi
+inurl:admin.cgi
+intitle:"login" inurl:"/auth/"
+"login" "adp login" -adplogin.us -adplogin.org
+"Oracle peoplesoft sign in" inurl:"cmd=login?" -github
+"iCONECT 4.1 :: Login"
+"PaperCut Login"
+"CCCLogin.aspx"
+intitle:"login" inurl:"scada login"
+"login" inurl:"account/auth" -github -gitlab
+"please sign in" "sign in" "gophish" +"login"
+"HostingAccelerator" intitle:"login" +"Username" -"news"
+"inspanel" intitle:"login" -"cannot" "Login ID" -site:inspediumsoft.com
+"Login Name" Repository Webtop intitle:login
+intitle:"login" inurl:"/admin/" "ImageVue"
+"bp blog admin" intitle:login OR intitle:admin
+inurl:"/admin/login" -site:github.com -site:stackoverflow.com
+intitle:"eZ publish administration"
+
+# --- Enterprise Application Logins ---
+"department" "agency" "government" intitle:"login form" -youtube -template
+"login" "secure" intitle:"online banking" -youtube -template
+inurl:office365 AND intitle:"Sign In" OR intitle:"Login" OR intitle:"Portal"
+allinurl:"owa/auth/logon.aspx" -google -github
+allinurl:"zimbra/?zinitmode=http" -google -github
+"Umbraco" inurl:"#/login"
+allinurl:wps/portal/ login
+site:*/auth intitle:login
+
+# --- SCADA / ICS Login ---
+intitle:"login" inurl:"scada"
+intitle:"SCADA" "login" "password"
+intitle:"HMI" "login" "password"
+intitle:"PLC" "login" "password"
+inurl:"/portal/login" intitle:"SCADA"

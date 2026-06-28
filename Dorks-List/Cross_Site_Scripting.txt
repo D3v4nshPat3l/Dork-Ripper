@@ -1,0 +1,141 @@
+# ============================================================
+# CROSS-SITE SCRIPTING (XSS) DORKS
+# Dorks for discovering pages with parameters potentially
+# vulnerable to reflected/stored XSS - authorized testing only
+# ============================================================
+
+# --- XSS Prone Search Parameters ---
+inurl:q= inurl:.php
+inurl:s= inurl:.php
+inurl:search= inurl:.php
+inurl:query= inurl:.php
+inurl:keyword= inurl:.php
+inurl:lang= inurl:.php
+inurl:term= inurl:.php
+
+# --- Search Pages with Parameters ---
+inurl:& inurl:search
+inurl:& inurl:query
+inurl:& inurl:suche
+inurl:& inurl:input
+inurl:& inurl:form
+inurl:& inurl:title
+inurl:& inurl:city
+inurl:& inurl:date
+inurl:& inurl:topic
+inurl:& inurl:test
+inurl:& inurl:quiz
+inurl:& inurl:survey
+inurl:& inurl:game
+inurl:& inurl:competition
+inurl:& inurl:search inurl:q
+inurl:& inurl:search inurl:s
+index.php? inurl:&
+inurl:search
+inurl:suche
+inurl:page
+inurl:& inurl:query
+inurl:search inurl:page
+inurl:search inurl:p
+inurl:query filetype:html inurl:page
+inurl:query filetype:html inurl:sort
+inurl:query filetype:php
+
+# --- Message/Alert Parameters ---
+inurl:& inurl:message
+inurl:& inurl:error
+inurl:& inurl:success
+inurl:& inurl:info
+inurl:& inurl:alert
+inurl:& inurl:notify
+
+# --- View/Layout Parameters ---
+inurl:& inurl:state
+inurl:& inurl:filter
+inurl:& inurl:sort
+inurl:& inurl:order
+inurl:& inurl:view
+inurl:& inurl:layout
+inurl:& inurl:tab
+
+# --- Locale/Theme Parameters ---
+inurl:& inurl:lang
+inurl:& inurl:locale
+inurl:& inurl:theme
+
+# --- Template Parameters ---
+inurl:& inurl:template
+inurl:& inurl:tpl
+inurl:& inurl:content
+inurl:& inurl:body
+inurl:& inurl:html
+
+# --- JSON/Data Parameters ---
+inurl:& inurl:json
+inurl:& inurl:data
+inurl:& inurl:value
+
+# --- Combined Search Patterns ---
+inurl:search inurl:query
+inurl:search inurl:term
+inurl:search inurl:keyword
+inurl:page inurl:id
+inurl:page inurl:name
+index.php? inurl:query
+index.php? inurl:search
+index.php? inurl:page
+index.php? inurl:id
+filetype:php inurl:search
+filetype:php inurl:query
+
+# --- Reflected Output in Error Messages ---
+"Parse error: parse error, unexpected T_VARIABLE" "on line" filetype:php
+"Fatal error" "on line"
+"Cannot use a scalar value as an array in" "on line"
+"[function.getimagesize]: failed to open stream"
+"Below is a rendering of the page up to the first error." ext:xml
+"Exception" "stack trace"
+
+# --- Open Bug Bounty XSS Reports ---
+site:"openbugbounty.org" inurl:reports
+site:"openbugbounty.org" inurl:reports intext:"example.com"
+
+# --- Common XSS Target Patterns ---
+inurl:/search.php?q=
+inurl:/search?query=
+inurl:/search?q=
+inurl:/?s=
+inurl:/result?q=
+inurl:/find?keyword=
+inurl:comment.php?id=
+inurl:feedback.php?msg=
+inurl:contact.php?message=
+inurl:error.php?msg=
+inurl:display.php?text=
+inurl:redirect.php?url=
+inurl:output.php?data=
+inurl:profile.php?name=
+
+# --- Redirect/Callback Parameters (DOM XSS) ---
+inurl:& inurl:redirect
+inurl:& inurl:return
+inurl:& inurl:callback
+inurl:& inurl:continue
+inurl:& inurl:dest
+inurl:& inurl:destination
+inurl:& inurl:ref
+inurl:& inurl:referrer
+inurl:& inurl:next
+inurl:& inurl:target
+
+# --- HTML Injection Points ---
+"html allowed" guestbook
+inurl:"guestbook.php"
+inurl:"sign.php"
+inurl:"addcomment.php"
+
+# --- Technology-Specific XSS ---
+inurl:".asp" inurl:"id=" inurl:"="
+inurl:".php" inurl:"search=" inurl:"="
+inurl:".jsp" inurl:"query=" inurl:"="
+inurl:".cgi" inurl:"search=" inurl:"="

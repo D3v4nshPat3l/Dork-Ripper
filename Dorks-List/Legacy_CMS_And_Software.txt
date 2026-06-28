@@ -1,0 +1,175 @@
+# ============================================================
+# LEGACY & VINTAGE CMS / SOFTWARE
+# Dorks for finding outdated CMS platforms, legacy software,
+# and end-of-life applications still in production
+# ============================================================
+
+# --- Legacy CMS Platforms ---
+"Powered by 4smart"
+"Powered by 68kb"
+"Powered by A-CART"
+"Powered By Aardvark Topsites PHP 4.2.2"
+"Powered by Absolute File Send"
+"Powered by Absolute Podcast"
+"Powered by Active PHP Bookmarks v1.3"
+"powered by aflog"
+"Powered By AlstraSoft AskMe Pro"
+"Powered by AlstraSoft SendIt Pro"
+"Powered by AMCMS3"
+"Powered by and copyright class-1" 0.24.4
+"powered by andromeda version"
+"powered by antiboard"
+"powered by AllMyGuests"
+"POWERED BY ALITALK"
+"powered by Albinator"
+"Power by Blakord Portal"
+"Power by:RichStrong CMS"
+"Powerd by www.e-webtech.com"
+"Powered By : Yamamah Version 1.00"
+"Powered by : elkagroup.com"
+"Powered by [ iSupport 1.8 ]"
+"Powered by 123LogAnalyzer"
+"Powered by 2Moons"
+"powered by 4images"
+"Powered by Ajax Portal 3.0"
+"Powered by 0DayDB v2.3"
+
+# --- Legacy Forum Software ---
+"vBulletin Version 1.1.5"
+"Ideal BB Version: 0.1"
+"pForum 1.29a" OR "Powie's PSCRIPT Forum 1.26"
+"pForum 1.30"
+"Elite Forum Version"
+"AcmlmBoard v1.A2"
+"Forum Active Bulletin Board version 1.1"
+"Copyright (C) 2000 Phorum Development Team"
+"e107.org 2002/2003" inurl:forum_post.php
+allintitle:powered by DeluxeBB
+"BlackBoard 1.5.1-f"
+"Cyphor (Release:" -www.cynox.ch
+"CzarNews v1.12" OR "CzarNews v1.13" OR "CzarNews v1.14"
+"Copyright 2004 easy-content forums"
+"Mimicboard2 086" "2000 Nobutaka Makino"
+
+# --- Legacy E-Commerce ---
+"More Info about MetaCart Free"
+"Online Store - Powered by ProductCart"
+"Copyright MaxiSepet ©"
+"eCommerce Engine © 2006 xt:Commerce Shopsoftware"
+"MidiCart PHP Database Management"
+"All Rights Reserved. Powered by DieselScripts.com"
+"Affiliate Network Pro"
+"2003 DUware All Rights Reserved"
+"Duclassified" -site:duware.com
+"duclassmate" -site:duware.com
+"Dudirectory" -site:duware.com
+"dudownload" -site:duware.com
+"DUpaypal" -site:duware.com
+"CosmoShop by Zaunz Publishing"
+"PHPAuction GPL Enhanced V2.51"
+"Marketplace Version 1.1.1"
+
+# --- Legacy Content Management ---
+"2005 SugarCRM Inc. All Rights Reserved" "Powered By SugarCRM"
+"Content managed by the Etomite Content Management System"
+"DeeEmm CMS"
+"Aurora CMS"
+"CMS Webmanager-pro"
+"cms SunLight 5.2"
+"Based on DoceboLMS 2.0"
+"ATutor 1.6.4"
+"2004-2005 ReloadCMS Team."
+"Barbecued by sNews"
+"Basado en Spirate"
+"Personal .NET Portal"
+"Powered by JTL-Shop 2"
+"Powered by Pie Cart Pro"
+"Powered by Xpoze"
+"MunzurSoft Wep Portal W3"
+"Cms.tut.su, 2009 g."
+"FlatNuke" "Valid HTML 4.01!" "Valid CSS!"
+"Devana is an open source project !"
+"nukeai beta3"
+"PHP BP Team"
+"MangoBery 1.0 Alpha"
+"Link Department"
+"PHPNews Version 0.93"
+"PHPGlossar Version 0.8"
+"PhpLinkExchange v1.02"
+"PHP Link Portal v1.95.1"
+"PHP Project Management 0.8.10"
+"portailphp v1.3"
+"PHP Easy Downloader"
+"Blog powered by sNews"
+"BlogMe PHP created by Gamma Scripts"
+"CaLogic Calendars V1.2.2"
+"Calendar programming by AppIdeas.com" filetype:php
+"CNStats 2.9"
+"PKs Movie Database"
+"phpQuestionnaire v3"
+"Jax Calendar v1.34"
+"LinPHA Version 1.3.x"
+"Factux le facturier libre V 1.1.5"
+"PHP Gallery © 2010 PHP Weby"
+"php-addressbook"
+"Copyright 2005 Affiliate Directory"
+"Designed by Spaceacre"
+"Maintained with Subscribe Me 2.044.09p"
+"2007 BookmarkX script"
+"Download Gallery at matteobinda.com"
+"Générér par KDPics v1.18"
+"News Managed by Ditto News"
+"Copyright KerviNet"
+
+# --- Legacy Web Hosting & Portals ---
+"Copyright Devellion Limited 2005. All rights reserved."
+"Copyright Interactivefx.ie"
+"Developed by Bispage.com"
+"Developed by Infoware Solutions"
+"Developed by Quate.net."
+"Developed by rbk"
+"Designed & Developed by N.E.T E-Commerce Group."
+"Designed & Developed by net-finity"
+"Designed & Developed by Zeeways.com"
+"Designed and Developed by Debliteck Ltd"
+"Designed and powered by AWS Sports"
+"Desenvolvido por WeBProdZ"
+"Desenvolvido por: Fio Mental"
+"Created by weenCompany"
+"Eyeland Studio Inc. All Rights Reserved."
+"made visual by sightFACTORY"
+"copyright 2006 Broadband Mechanics"
+"(C) by CyberTeddy"
+"(C) This site is NITROpowered!"
+"& Spider Friendly by Crack"
+"mumbo jumbo media" inurl:"index.php"
+"Copyright-2008@zeejobsite.com"
+"Copyright 2008 ImenAfzar ver :2.0.0.0"
+"Copyright @2007 Iatek LLC"
+"FC Bigfeet" -inurl:mail
+"AlumniServer project"
+"lv_poweredBy"
+"BioScripts"
+
+# --- Legacy Security Appliances ---
+"2004 - 2018 iboss, Inc. All rights reserved."
+"Cisco Systems, Inc. VPN 3000 Concentrator"
+"Novell, Inc" WEBACCESS Username Password
+"Login - Sun Cobalt RaQ"
+"Microsoft CRM : Unsupported Browser Version"
+"CERN httpd 3.0B (VAX VMS)"
+
+# --- Legacy Guestbooks ---
+"Creative Guestbook"
+"Emefa Guestbook V 3.0"
+"Jevonweb Guestbook"
+"Galerie 3.2 © 2004 by progressive"
+"Gallery powered by fMoblog"
+"generated by Exhibit Engine 1.5 RC 4"
+"Multi-Page Comment System"
+"Obtenez votre forum Aztek" -site:forum-aztek.com
+"Page created in" "seconds by glFusion" +RSS
+"By Geeklog" "Created this page in" +seconds
+"Help * Contact * Imprint * Sitemap" "powered by papoo"
+"Help desk software by United Web Coders rev. 3.0.640"
+"Liberum Help Desk, Copyright (C) 2001 Doug Luxem"

@@ -1,0 +1,110 @@
+# ============================================================
+# EMAIL & PERSONAL DATA EXPOSURE
+# Dorks for finding exposed email addresses, personal info,
+# contact lists, mailing lists, and PII leaks
+# ============================================================
+
+# --- Email Address Harvesting ---
+intext:"@gmail.com" filetype:txt
+intext:"@gmail.com" filetype:csv
+intext:"@gmail.com" filetype:xls
+intext:"@gmail.com" filetype:xlsx
+intext:"@yahoo.com" filetype:txt
+intext:"@hotmail.com" filetype:txt
+intext:"@outlook.com" filetype:txt
+intext:"@aol.com" filetype:txt
+intext:"@protonmail.com" filetype:txt
+intext:"@gmail.com" AND intext:"@yahoo.com" filetype:sql
+allinurl:"@gmail.com"
+"battlefield" "email" site:pastebin.com
+
+# --- Contact Lists & Directories ---
+filetype:csv "email" "phone" "name"
+filetype:xls "email" "phone" "name"
+filetype:xlsx "email" "phone" "name"
+filetype:csv "first name" "last name" "email"
+filetype:xls "first name" "last name" "email"
+filetype:xlsx "first name" "last name" "email"
+filetype:csv "email" "address" "phone"
+filetype:xls "email" "address" "phone"
+filetype:txt "email" "phone" "address" -site:github.com
+
+# --- Mailing List Data ---
+"mailing list memberships reminder"
+"delivered by mailman" inurl:admin/mailman
+intitle:"Mailman Administrator Authentication"
+"Email delivery powered by Google" ext:pdf OR ext:txt
+
+# --- Resume & CV Data ---
+"phone * * *" "address *" "e-mail" intitle:"curriculum vitae"
+filetype:pdf intitle:"curriculum vitae" "email" "phone"
+filetype:doc intitle:"resume" "email" "phone"
+filetype:docx intitle:"resume" "email" "phone"
+filetype:pdf intitle:"resume" "email" "phone"
+
+# --- User Databases ---
+filetype:sql "email" "password"
+filetype:sql "users" "email" "password"
+filetype:sql "INSERT INTO" "email"
+filetype:mdb "email" "password"
+filetype:csv "username" "password" "email"
+inurl:wp-json/wp/v2/users
+
+# --- Social Engineering Data ---
+filetype:txt "SSN" OR "social security number"
+filetype:xls "SSN" OR "social security number"
+filetype:csv "SSN" OR "social security number"
+filetype:pdf "SSN" OR "social security number" -form
+filetype:xls "date of birth" "address"
+filetype:csv "date of birth" "address"
+filetype:txt "credit card" "exp"
+filetype:xls "credit card"
+"LGD_CARDNUM" ext:log -site:camper.com
+
+# --- Identity Documents ---
+"passport" filetype:xls
+"passport" filetype:pdf -form -application
+"driver license" filetype:xls
+"driver license" filetype:csv
+filetype:pdf "visa" "passport number" -form
+
+# --- Pastebin & Paste Sites ---
+site:pastebin.com "password"
+site:pastebin.com "email" "password"
+site:pastebin.com intext:"@gmail.com"
+site:pastebin.com "username" "password"
+site:paste.ee "password"
+site:ghostbin.com "password"
+site:justpaste.it "password"
+site:hastebin.com "password"
+
+# --- Leaked Data Aggregations ---
+"# End Stealer" ext:txt
+intext:"combo" filetype:txt "password"
+intext:"combo list" filetype:txt
+intext:"dump" "email" "password" filetype:txt
+
+# --- Email Configuration ---
+filetype:env "MAIL_USERNAME"
+filetype:env "MAIL_PASSWORD"
+filetype:env "SMTP_USER"
+filetype:env "SMTP_PASS"
+filetype:env "EMAIL_PASSWORD"
+"Emanuele Guadagnoli" "CcMail"
+"PHP eMailer is created by" ext:php
+"Mail-it Now!" intitle:"Contact form"
+
+# --- Guestbook & Forum Emails ---
+"Creative Guestbook"
+"Emefa Guestbook V 3.0"
+"Jevonweb Guestbook"
+"html allowed" guestbook
+"Members Statistics" "Total Members" "Guests Online"
+
+# --- Financial & Payment Data ---
+filetype:xls "bank account"
+filetype:csv "bank account"
+filetype:xls "routing number"
+filetype:pdf "invoice" "payment" intext:"account number"
+intext:"payment" "card number" filetype:txt
+intext:"billing" "credit card" filetype:xls

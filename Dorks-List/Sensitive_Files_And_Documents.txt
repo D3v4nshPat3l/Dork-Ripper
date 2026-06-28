@@ -1,0 +1,168 @@
+# ============================================================
+# SENSITIVE FILES & DOCUMENTS
+# Dorks for finding exposed sensitive files, configuration
+# files, backups, logs, and critical documents
+# ============================================================
+
+# --- Configuration Files ---
+filetype:conf password
+filetype:cfg password
+filetype:ini password
+filetype:ini "[boot loader]" "WINNT"
+filetype:cfg "enable secret"
+filetype:cfg "enable password"
+filetype:cnf password
+filetype:properties password
+filetype:yaml password
+filetype:yml password
+filetype:toml password
+filetype:xml password
+filetype:json password -site:github.com
+ext:conf "server" "port" -site:github.com
+ext:cfg "password" -site:github.com
+ext:ini "password" -site:github.com
+"web.config" filetype:config inurl:admin
+"wp-config.php" filetype:bak
+"wp-config.php.bak"
+"configuration.php" filetype:bak "Joomla"
+"settings.php" filetype:bak "Drupal"
+".htaccess" filetype:txt
+".htpasswd" filetype:txt
+intitle:"index of" "web.config"
+intitle:"index of" "wp-config.php.bak"
+
+# --- Log Files ---
+filetype:log password
+filetype:log "login"
+filetype:log "authentication"
+filetype:log inurl:access.log
+filetype:log inurl:error.log
+filetype:log "InnoDB:"
+filetype:log "PHPSESSID"
+filetype:log "authentication failure; logname="
+filetype:log "[SQL Server Driver]"
+ext:log "user_pass"
+ext:log "Blocking Reason:"
+ext:log "MailChimp API error:"
+ext:log "PHP Fatal error: require()"
+"error_log" inurl:/wp-content
+"HTTP" inurl:"access.log" ext:log
+"MacHTTP" filetype:log inurl:machttp.log
+"Logfile of Trend Micro HijackThis" ext:log
+"Microsoft (R) Windows (TM) Version DrWtsn32 Copyright (C)" ext:log
+"OTL logfile" "by OldTimer" ext:txt
+"OTL Extras logfile created on:" ext:txt
+"MiniToolBox by Farbar" ext:txt
+"admin account info" filetype:log
+
+# --- Backup Files ---
+filetype:bak password
+filetype:bak inurl:admin
+filetype:bak "configuration"
+filetype:old password
+filetype:old inurl:admin
+ext:bak "password"
+ext:old "password"
+ext:backup "password"
+ext:swp "password"
+intitle:"index of" "backup" ext:sql
+intitle:"index of" "backup" ext:zip
+intitle:"index of" "backup" ext:tar.gz
+intitle:"index of" ".bak"
+intitle:"index of" ".old"
+intitle:"index of" "dump.sql"
+intitle:index.of index.php.bak OR inurl:index.php.bak
+"plugins/wp-db-backup/wp-db-backup.php"
+
+# --- Database Files ---
+filetype:sql password
+filetype:sql "INSERT INTO"
+filetype:mdb password
+filetype:mdb inurl:admin
+filetype:db password
+filetype:sqlite password
+filetype:sqlite3 password
+filetype:accdb password
+accdb OR accde intitle:"index of" -pub -google
+"mysql dump" filetype:sql
+"-- MySQL dump" "Server version" "Table structure for table"
+"-- MySQL dump" ext:sql -git
+"-- MySQL Administrator dump" ext:sql
+"#mysql dump" filetype:sql 21232f297a57a5a743894a0e4a801fc3
+
+# --- Document Leaks ---
+filetype:pdf "confidential"
+filetype:pdf "internal use only"
+filetype:pdf "not for distribution"
+filetype:pdf "restricted"
+filetype:pdf "classified"
+filetype:pdf "Declassified and Approved for Release by"
+filetype:pdf "google confidential"
+filetype:doc "confidential"
+filetype:docx "confidential"
+filetype:doc "not for distribution"
+filetype:docx "not for distribution"
+filetype:doc "internal only"
+filetype:xls "confidential"
+filetype:xlsx "confidential"
+filetype:pptx "confidential"
+filetype:rtf "confidential"
+"not for distribution" confidential
+"not for public release" -.edu -.gov -.mil
+"Do not distribute" (ext:pdf | ext:doc | ext:docx | ext:rtf)
+allintitle:restricted filetype:doc site:gov
+
+# --- Source Code Files ---
+filetype:php password
+filetype:php "mysql_connect"
+filetype:php "mysqli_connect"
+filetype:inc "password"
+filetype:inc "mysql_connect"
+"mysqli_connect" ext:inc
+filetype:asp password
+filetype:aspx password
+filetype:jsp password
+filetype:py password -site:github.com
+filetype:rb password -site:github.com
+filetype:java password -site:github.com
+filetype:cs password -site:github.com
+
+# --- SSH & Security Files ---
+filetype:key "PRIVATE KEY"
+filetype:pem "CERTIFICATE"
+filetype:pem "RSA PRIVATE KEY"
+filetype:ppk "PuTTY"
+filetype:asc "PGP"
+filetype:p12 inurl:certificate
+filetype:jks inurl:keystore
+"PGP SIGNED MESSAGE-----" inurl:"md5sums"
+"[Tera Term]" inurl:"teraterm.ini" ext:ini -git
+"[dirs]" inurl:"mirc.ini" -git
+
+# --- Cloud & Infrastructure Files ---
+filetype:tf "aws_access_key"
+filetype:tf "password"
+filetype:tfvars "password"
+filetype:plist password
+"# Kickstart" filetype:cfg
+s3 site:amazonaws.com filetype:log
+s3 site:amazonaws.com intext:dhcp filetype:txt
+
+# --- Personal & Identity Documents ---
+"passport" filetype:xls site:*.edu.* | site:*.gov.* | site:*.com.*
+"phone * * *" "address *" "e-mail" intitle:"curriculum vitae"
+"air confirmation" "passenger(s)"
+"automatic teller" "operator manual" "password" filetype:pdf
+
+# --- Report Files ---
+"IBM Security AppScan Report" ext:pdf
+"Host Vulnerability Summary Report"
+"Network Vulnerability Assessment Report"
+"Network Host Assessment Report" "Internet Scanner"
+"havij report" "Target" ext:html
+":: Arachni Web Application Security Report"
+
+# --- Broad File Extension Hunting ---
+ext:log ext:conf ext:cnf ext:ini ext:env ext:sh ext:bak ext:backup ext:swp ext:old ext:git ext:svn ext:htpasswd ext:htaccess ext:json
+ext:sql ext:db ext:mdb ext:sqlite ext:sqlite3 ext:accdb
+ext:key ext:pem ext:ppk ext:p12 ext:jks

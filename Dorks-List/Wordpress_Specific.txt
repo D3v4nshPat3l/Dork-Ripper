@@ -1,0 +1,127 @@
+# ============================================================
+# WORDPRESS SPECIFIC DORKS
+# Comprehensive collection of WordPress-specific dorks for
+# finding vulnerabilities, misconfigurations, and exposures
+# ============================================================
+
+# --- WordPress Core Discovery ---
+inurl:wp-login.php
+inurl:wp-admin
+inurl:wp-admin/install.php
+inurl:wp-admin/setup-config.php
+inurl:wp-config.php
+inurl:wp-config.php.bak
+inurl:wp-config.php.old
+inurl:wp-config.php.txt
+inurl:wp-config.php~
+inurl:wp-cron.php
+"is proudly powered by WordPress"
+"DB_PASSWORD" "DB_USER" filetype:php inurl:wp-config
+
+# --- WordPress Enumeration ---
+inurl:wp-json/wp/v2/users
+inurl:wp-json/oembed
+intitle:"Index of" inurl:wp-json/oembed
+inurl:?rest_route=/wp/v2/users
+inurl:?author=1
+inurl:?author=2
+inurl:?author=3
+inurl:wp-login.php?action=register
+inurl:wp-login.php?action=lostpassword
+
+# --- WordPress Plugin Vulnerabilities ---
+inurl:wp-content/plugins/
+inurl:wp-content/plugins/ intitle:"index of"
+inurl:wp-content/plugins/revslider
+inurl:wp-content/plugins/showbiz
+inurl:wp-content/plugins/cherry-plugin
+inurl:wp-content/plugins/downloads-manager
+inurl:wp-content/plugins/elegantthemes
+inurl:wp-content/plugins/woothemes
+inurl:wp-content/plugins/woocommerce
+inurl:wp-content/plugins/gravity-forms
+inurl:wp-content/plugins/contact-form-7
+inurl:wp-content/plugins/jetpack
+inurl:wp-content/plugins/w3-total-cache
+inurl:wp-content/plugins/wp-super-cache
+inurl:wp-content/plugins/all-in-one-seo-pack
+inurl:wp-content/plugins/yoast-seo
+inurl:wp-content/plugins/akismet
+inurl:wp-content/plugins/bbpress
+inurl:wp-content/plugins/buddypress
+inurl:wp-content/plugins/nextgen-gallery
+inurl:wp-content/plugins/wp-file-manager
+allinurl:wp-content/plugins/wptf-image-gallery/
+allinurl:"wp-content/plugins/wordpress-popup/views/admin/"
+allinurl:"/wp-content/plugins/wp-noexternallinks"
+allinurl:"wp-content/plugins/st_newsletter"
+"plugins/wp-db-backup/wp-db-backup.php"
+
+# --- WordPress File Manager (Critical) ---
+inurl:wp-content/plugins/wp-file-manager
+inurl:wp-file-manager/lib/php/connector.minimal.php
+inurl:wp-content/plugins/elfinder
+
+# --- WordPress Debug & Error Logs ---
+inurl:wp-content/debug.log
+"error_log" inurl:/wp-content
+inurl:wp-content/uploads/ ext:log
+"/wp-admin/admin-ajax" ext:txt
+allinurl:mc4wp-debug.log ext:log
+
+# --- WordPress Backup Files ---
+intitle:"index of" /wp-content/uploads/backupbuddy_backups
+inurl:wp-content/backups
+inurl:wp-content/uploads/backups
+inurl:wp-content/uploads/ ext:sql
+inurl:wp-content/uploads/ ext:zip
+inurl:wp-content/uploads/ ext:tar.gz
+inurl:wp-content/backup-db
+inurl:wp-snapshots
+
+# --- WordPress Theme Vulnerabilities ---
+inurl:wp-content/themes/ intitle:"index of"
+inurl:wp-content/themes/starter
+inurl:wp-content/themes/flavor
+inurl:wp-content/themes/flavor/flavor-developer
+
+# --- WordPress XML-RPC ---
+inurl:xmlrpc.php "XML-RPC server accepts POST requests only"
+inurl:xmlrpc.php intitle:"XML-RPC"
+
+# --- WordPress Upload Shells ---
+inurl:/wp-content/uploads/shell.php
+inurl:/wp-content/uploads/ ext:php -"index"
+inurl:wp-content/uploads/ ext:phtml
+
+# --- WordPress Specific Exposures ---
+intitle:"Index of" wp-admin
+intitle:"Index of" wp-includes
+intitle:"Index of" wp-content
+intitle:"Index of" inurl:/wp-content/uploads/
+inurl:wp-includes/js/tinymce
+inurl:wp-includes/version.php
+inurl:/readme.html "WordPress"
+
+# --- WordPress Admin Panels ---
+inurl:wp-admin/admin.php
+inurl:wp-admin/edit.php
+inurl:wp-admin/options.php
+inurl:wp-admin/users.php
+inurl:wp-admin/themes.php
+inurl:wp-admin/plugins.php
+inurl:wp-admin/update-core.php
+
+# --- WordPress Database ---
+inurl:wp-content ext:sql
+inurl:wp-content/uploads ext:sql
+filetype:sql "wp_users"
+filetype:sql "wp_options"
+filetype:sql "wp_posts"
+filetype:sql "wp_usermeta"
+
+# --- WordPress Specific Login ---
+intitle:"Log In" inurl:wp-login.php
+intitle:"WordPress" inurl:wp-login.php "Lost your password?"
+inurl:wp-login.php "Register"
+inurl:wp-login.php?redirect_to=

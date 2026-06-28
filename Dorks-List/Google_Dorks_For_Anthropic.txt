@@ -1,0 +1,6 @@
+filetype:env "ANTHROPIC_API_KEY"
+filetype:env "ANTHROPIC_KEY"
+filetype:json "anthropic"
+filetype:yaml "anthropic"
+"anthropic" "api_key"
+"claude" "api_key"

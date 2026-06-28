@@ -1,0 +1,16 @@
+# Standard Gitignore for Dorks Repo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp files
+_temp_dorkhub/
+*.tmp
+*.bak
+*.log

@@ -1,0 +1,111 @@
+# ============================================================
+# OPEN REDIRECT & SSRF DORKS
+# Dorks for finding URLs vulnerable to open redirect and
+# server-side request forgery attacks
+# ============================================================
+
+# --- Open Redirect Prone Parameters ---
+inurl:url= inurl:.php
+inurl:return= inurl:.php
+inurl:next= inurl:.php
+inurl:redirect= inurl:.php
+inurl:redir= inurl:.php
+inurl:ret= inurl:.php
+inurl:r2= inurl:.php
+inurl:page= inurl:& inurl:http
+inurl:redirect_url=
+inurl:redirect_uri=
+inurl:return_url=
+inurl:return_to=
+inurl:next_url=
+inurl:continue=
+inurl:dest=
+inurl:destination=
+inurl:goto=
+inurl:forward=
+inurl:follow=
+inurl:out=
+inurl:view= inurl:http
+inurl:target=http
+inurl:link=http
+inurl:u=http
+inurl:go=http
+inurl:to=http
+inurl:href=http
+inurl:site=http
+inurl:ref=http
+
+# --- Redirect in Login/Auth Flows ---
+inurl:login inurl:redirect=
+inurl:login inurl:return=
+inurl:login inurl:next=
+inurl:login inurl:continue=
+inurl:logout inurl:redirect=
+inurl:logout inurl:return=
+inurl:auth inurl:redirect=
+inurl:auth inurl:return=
+inurl:signin inurl:redirect=
+inurl:signup inurl:redirect=
+inurl:register inurl:redirect=
+
+# --- Redirect in OAuth/SSO ---
+inurl:oauth inurl:redirect_uri=
+inurl:authorize inurl:redirect_uri=
+inurl:callback inurl:redirect_uri=
+inurl:sso inurl:redirect=
+inurl:saml inurl:RelayState=
+
+# --- SSRF Prone Parameters ---
+inurl:url= inurl:.php
+inurl:path= inurl:.php
+inurl:dest= inurl:.php
+inurl:html= inurl:.php
+inurl:data= inurl:.php
+inurl:domain= inurl:.php
+inurl:page= inurl:.php inurl:http
+inurl:proxy= inurl:.php
+inurl:fetch= inurl:.php
+inurl:request= inurl:.php
+inurl:uri= inurl:.php
+inurl:host= inurl:.php
+inurl:site= inurl:.php
+inurl:feed= inurl:.php
+inurl:target= inurl:.php
+inurl:load= inurl:.php
+inurl:download= inurl:.php
+inurl:api= inurl:http
+
+# --- File Fetching / URL Import ---
+inurl:imgurl= inurl:.php
+inurl:image_url= inurl:.php
+inurl:img= inurl:http
+inurl:source= inurl:http
+inurl:file= inurl:http
+inurl:document= inurl:http
+inurl:pdf= inurl:http
+inurl:xml= inurl:http
+inurl:rss= inurl:http
+inurl:import= inurl:http
+inurl:export= inurl:http
+
+# --- Webhook/Callback SSRF ---
+inurl:webhook= inurl:http
+inurl:callback= inurl:http
+inurl:notify_url= inurl:http
+inurl:ping= inurl:http
+inurl:postback= inurl:http
+inurl:check= inurl:http
+inurl:validate= inurl:http
+
+# --- Cloud Metadata SSRF ---
+inurl:"169.254.169.254"
+inurl:"metadata.google.internal"
+inurl:"instance-data" inurl:"latest"
+
+# --- PDF/Image Generation SSRF ---
+inurl:generate_pdf inurl:url=
+inurl:screenshot inurl:url=
+inurl:render inurl:url=
+inurl:preview inurl:url=
+inurl:convert inurl:url=
+inurl:wkhtmltopdf inurl:url=

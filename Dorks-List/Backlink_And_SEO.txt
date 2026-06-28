@@ -1,0 +1,136 @@
+# ============================================================
+# BACKLINK & SEO DORKS
+# Dorks for SEO research, backlink analysis, blog commenting,
+# forum posting, wiki editing, and link building
+# ============================================================
+
+# --- Blog Engine Comment Dorks ---
+"powered by wordpress" "leave a comment"
+"powered by wordpress" "add comment"
+"powered by wordpress" "you may use these HTML tags"
+"powered by blogger" "post a comment"
+"powered by blogengine" "leave a comment"
+"powered by movable type" "leave a comment"
+"powered by typepad" "leave a comment"
+"powered by b2evolution" "leave a comment"
+"powered by textpattern" "leave a comment"
+"powered by nucleus" "leave a comment"
+"powered by serendipity" "leave a comment"
+"powered by pivot" "leave a comment"
+"powered by lifetype" "leave a comment"
+"powered by dotclear" "leave a comment"
+"powered by drupal" "add new comment"
+"powered by joomla" "add comment"
+"post a comment" "notify me" "website"
+"leave a reply" "your email" "name" "website"
+"add a comment" "name" "email" "website"
+inurl:wp-comments-post.php
+inurl:comment-page-
+intitle:"leave a reply" "your email"
+
+# --- Forum Posting Dorks ---
+"powered by vBulletin" "post reply"
+"powered by phpBB" "reply to topic"
+"powered by SMF" "reply"
+"powered by MyBB" "post reply"
+"powered by IPB" "reply to topic"
+"powered by Invision" "reply"
+"powered by XenForo" "reply to thread"
+"powered by Vanilla Forums" "reply"
+"powered by Discourse" "reply"
+"powered by bbPress" "reply"
+"powered by FluxBB" "reply"
+"powered by PunBB" "reply"
+"powered by miniBB" "reply"
+inurl:forum "post reply" "register"
+inurl:forum inurl:register
+inurl:forum inurl:newthread
+inurl:forum inurl:newreply
+inurl:forums "powered by" "register"
+
+# --- Wiki Dorks ---
+"powered by MediaWiki" "edit"
+"powered by DokuWiki" "edit this page"
+"powered by TikiWiki" "edit"
+"powered by PmWiki" "edit"
+"powered by MoinMoin" "edit"
+"powered by TWiki" "edit"
+"powered by Wikidot" "edit"
+"powered by Confluence" "edit"
+inurl:wiki "create account" "edit"
+inurl:wiki inurl:action=edit
+inurl:wiki inurl:edit
+inurl:title= inurl:action=edit "wiki"
+
+# --- Social Bookmarking Dorks ---
+"powered by Scuttle" "register"
+"powered by pligg" "register"
+"powered by SemanticScuttle" "register"
+inurl:bookmarks "register" "add bookmark"
+inurl:bookmarks "submit" "url" "title"
+"add to bookmarks" "register" "url"
+
+# --- Web Directory Dorks ---
+"submit your site" "add url" "directory"
+"suggest url" "add site" "directory"
+"add link" "submit link" "directory"
+"powered by phpLD" "submit link"
+"powered by PHPLink" "submit link"
+"powered by eSyndiCat" "submit link"
+"powered by WSN Links" "submit link"
+"powered by STARTER Directory" "submit"
+inurl:addurl "submit your site"
+inurl:submitlink "add your link"
+inurl:suggest-link "directory"
+inurl:submit-site "directory"
+
+# --- Guest Posting Dorks ---
+"write for us" "guest post"
+"guest post" "submit" "guidelines"
+"become a contributor" "submit"
+"guest author" "submit an article"
+"contribute" "guest post" "write for us"
+"accepting guest posts" "submit"
+"guest blogging" "guidelines" "submit"
+"write for us" "technology"
+"write for us" "cybersecurity"
+"write for us" "security"
+"guest post" "submit" inurl:write-for-us
+
+# --- Image Comment Dorks ---
+"powered by Gallery" "add comment"
+"powered by Coppermine" "add comment"
+"powered by 4images" "add comment"
+"powered by Zenphoto" "add comment"
+"powered by Piwigo" "add comment"
+inurl:displayimage "add comment"
+inurl:gallery "add comment" "name"
+
+# --- Guestbook Dorks ---
+"powered by Lazarus Guestbook" "sign"
+"powered by Advanced Guestbook" "sign"
+"powered by BellaBook" "sign"
+"powered by phpBook" "sign"
+inurl:guestbook "sign" "name" "message"
+inurl:guestbook "add entry" "name"
+
+# --- Profile Creation Dorks ---
+inurl:user/register
+inurl:signup
+inurl:create-account
+inurl:registration
+"create your profile" "register"
+"join now" "create account" "free"
+
+# --- Article Submission Dorks ---
+"submit article" "register" "publish"
+"submit your article" "guidelines"
+"article submission" "register" "submit"
+inurl:submit-article "register"
+inurl:article-submission "register"
+
+# --- Press Release Dorks ---
+"submit press release" "register"
+"press release submission" "free"
+"distribute press release" "submit"
+inurl:submit-press-release

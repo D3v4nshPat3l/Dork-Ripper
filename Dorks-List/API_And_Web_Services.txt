@@ -1,0 +1,155 @@
+# ============================================================
+# API & WEB SERVICES EXPOSURE
+# Dorks for finding exposed APIs, web services, GraphQL
+# endpoints, and API documentation
+# ============================================================
+
+# --- Swagger / OpenAPI ---
+intitle:"Swagger UI" inurl:swagger
+intitle:"Swagger UI - " "Show/Hide"
+inurl:swagger-ui.html
+inurl:swagger.json
+inurl:swagger.yaml
+inurl:api-docs
+inurl:api/docs
+inurl:openapi.json
+inurl:openapi.yaml
+inurl:api/swagger
+inurl:/v1/swagger
+inurl:/v2/swagger
+inurl:/v3/swagger
+
+# --- GraphQL ---
+inurl:graphql
+inurl:graphiql
+inurl:/api/graphql
+inurl:graphql/console
+intitle:"GraphQL Playground"
+intitle:"GraphiQL"
+inurl:graphql?query=
+
+# --- REST API Endpoints ---
+inurl:/api/v1/
+inurl:/api/v2/
+inurl:/api/v3/
+inurl:/rest/api/
+inurl:/api/ filetype:json
+inurl:/api/ "methods"
+inurl:/api/users
+inurl:/api/admin
+inurl:/api/config
+inurl:/api/status
+inurl:/api/health
+inurl:/api/debug
+inurl:/api/test
+inurl:/api/info
+
+# --- API Keys Exposed in URLs ---
+inurl:api_key=
+inurl:apikey=
+inurl:access_token=
+inurl:auth_token=
+inurl:client_id= inurl:client_secret=
+inurl:token= inurl:api
+
+# --- WSDL & SOAP ---
+inurl:wsdl filetype:xml
+inurl:?wsdl
+filetype:wsdl
+inurl:soap
+inurl:asmx?wsdl
+inurl:svc?wsdl
+
+# --- gRPC ---
+inurl:grpc
+intitle:"gRPC" inurl:status
+intitle:"gRPC" inurl:health
+
+# --- Postman Collections ---
+filetype:json "postman" "collection"
+inurl:postman_collection.json
+filetype:json "_postman_" "request"
+site:getpostman.com "collection"
+
+# --- API Documentation ---
+inurl:redoc
+inurl:api/documentation
+inurl:api/reference
+inurl:api/explorer
+inurl:api-explorer
+inurl:developer/docs
+intitle:"API Documentation"
+intitle:"API Reference"
+intitle:"Developer Portal"
+
+# --- Webhook Endpoints ---
+inurl:webhook
+inurl:webhooks
+inurl:callback
+inurl:notify_url
+inurl:ipn
+inurl:postback
+
+# --- API Rate Limit / Debug ---
+inurl:api inurl:debug
+inurl:api inurl:test
+inurl:api inurl:staging
+inurl:api intitle:"error"
+"X-RateLimit" inurl:api
+"rate limit exceeded" inurl:api
+
+# --- Specific API Platforms ---
+inurl:api.stripe.com
+inurl:api.twilio.com
+inurl:api.sendgrid.com
+inurl:api.mailgun.net
+inurl:api.slack.com
+inurl:hooks.slack.com
+inurl:discord.com/api
+inurl:api.telegram.org
+site:execute-api.amazonaws.com
+site:cloudfunctions.net
+site:azurewebsites.net inurl:api
+
+# --- Firebase ---
+inurl:".firebaseio.com"
+inurl:".firebaseio.com" intext:password
+"firebase" "apiKey" filetype:json
+site:firebaseio.com
+
+# --- Elasticsearch ---
+inurl:":9200" "_cat"
+inurl:":9200" "_cluster"
+intitle:"Elasticsearch" inurl:_cluster
+inurl:":9200/_search"
+inurl:":9200/_cat/indices"
+
+# --- Redis ---
+inurl:":6379" intext:"redis"
+intitle:"Redis" inurl:info
+
+# --- MongoDB ---
+inurl:":27017"
+inurl:":27017" intext:"mongod"
+intitle:"MongoDB" inurl:login
+
+# --- CouchDB ---
+inurl:":5984" "_all_dbs"
+"Futon on Apache" inurl:_utils
+
+# --- RabbitMQ ---
+intitle:"RabbitMQ Management" inurl:login
+inurl:":15672" inurl:login
+
+# --- AI/ML API Keys ---
+"OPENAI_API_KEY"
+"OPENAI_KEY"
+"openai.api_key"
+"anthropic" "api_key"
+"claude" "api_key"
+"cohere" "api_key"
+"new OpenAI("
+"client = OpenAI("
+"openai.chat.completions.create"
+"openai.ChatCompletion.create"
+"openai.createCompletion"

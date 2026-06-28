@@ -1,0 +1,121 @@
+# ============================================================
+# MEDIA, ENTERTAINMENT & PIRACY
+# Dorks for finding exposed media content, streaming servers,
+# and downloadable resources
+# ============================================================
+
+# --- Directory Listings for Media ---
+"parent directory" MP3 -xxx -html -htm -php -shtml
+"parent directory" DVDRip -xxx -html -htm -php -shtml
+"parent directory" /appz/ -xxx -html -htm -php -shtml
+"parent directory" Gamez -xxx -html -htm -php -shtml
+"parent directory" Xvid -xxx -html -htm -php -shtml
+"parent directory" "Name of Singer or album" -xxx -html -htm -php
+
+# --- Movie & Video ---
+intitle:"index of" mkv
+intitle:"index of" mp4
+intitle:"index of" avi
+intitle:"index of" mov
+intitle:"index of" wmv
+intitle:"index of" "movies"
+intitle:"index of" "films"
+intitle:"index of" "video"
+intitle:"index of" "series"
+intitle:"index of" "season"
+intitle:"index of" "episode"
+intitle:"index of" "1080p"
+intitle:"index of" "720p"
+intitle:"index of" "BluRay"
+intitle:"index of" "WEB-DL"
+intitle:"index of" "BRRip"
+intitle:"index of" "HDRip"
+intitle:"index of" "DVDRip"
+
+# --- Music ---
+intitle:"index of" mp3
+intitle:"index of" flac
+intitle:"index of" ogg
+intitle:"index of" wav
+intitle:"index of" aac
+intitle:"index of" "music"
+intitle:"index of" "album"
+intitle:"index of" "discography"
+
+# --- E-Books ---
+intitle:"index of" epub
+intitle:"index of" mobi
+intitle:"index of" pdf "books"
+intitle:"index of" djvu
+intitle:"index of" "ebooks"
+intitle:"index of" "ebook"
+
+# --- Software & Applications ---
+intitle:"index of" iso
+intitle:"index of" exe
+intitle:"index of" dmg
+intitle:"index of" "software"
+intitle:"index of" "applications"
+intitle:"index of" "portable"
+94FBR "ADOBE PHOTOSHOP"
+
+# --- Games ---
+intitle:"index of" "games"
+intitle:"index of" "roms"
+intitle:"index of" "rom"
+intitle:"index of" "emulator"
+intitle:"index of" "Nintendo"
+intitle:"index of" "PlayStation"
+intitle:"index of" "Xbox"
+
+# --- Archives ---
+intitle:"index of" zip
+intitle:"index of" rar
+intitle:"index of" 7z
+intitle:"index of" tar.gz
+intitle:"index of" "compressed"
+
+# --- Streaming Servers ---
+intitle:"Icecast Streaming Server"
+intitle:"Shoutcast" "Server Status"
+intitle:"MPEG4IP Player"
+intitle:"Subsonic" inurl:login
+intitle:"Plex" inurl:login
+intitle:"Emby" inurl:login
+intitle:"Jellyfin" inurl:login
+
+# --- FTP Media Servers ---
+intitle:"index of" ftp "movies"
+intitle:"index of" ftp "music"
+intitle:"index of" ftp "games"
+"ftp://" "www.eastgame.net"
+
+# --- Torrent & Downloads ---
+intitle:"index of" "torrent"
+intitle:"index of" ".torrent"
+filetype:torrent
+inurl:m.zippyshare.com/
+
+# --- Photo Galleries ---
+"images in this album on"
+"Internet Photoshow - Slideshow"
+"100% | 50% | 25%" "Back to gallery" inurl:"show.php?imageid="
+"download this free gallery at matteobinda.com"
+"Everyone should be on TV! Now you can upload 2 TV"
+
+# --- CCTV Live Feeds ---
+intitle:"Live View" "AXIS"
+inurl:ViewerFrame?Mode=
+intitle:"Network Camera"
+inurl:"live.htm" intitle:"camera"
+intitle:"webcam" inurl:"/webcam"
+
+# --- Media Management ---
+intitle:"Calibre" inurl:library
+intitle:"Calibre-Web" inurl:login
+intitle:"Kavita" inurl:login
+intitle:"Komga" inurl:login
+intitle:"Radarr" inurl:login
+intitle:"Sonarr" inurl:login
+intitle:"Lidarr" inurl:login
+intitle:"Prowlarr" inurl:login

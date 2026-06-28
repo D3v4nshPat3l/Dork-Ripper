@@ -1,0 +1,6 @@
+filetype:env "DIGITALOCEAN_TOKEN"
+filetype:env "DO_TOKEN"
+filetype:json "digitalocean" "token"
+filetype:env "HEROKU_API_KEY"
+filetype:env "HEROKU_TOKEN"
+filetype:json "heroku" "api_key"

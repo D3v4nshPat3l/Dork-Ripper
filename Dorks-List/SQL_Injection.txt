@@ -1,0 +1,226 @@
+# ============================================================
+# SQL INJECTION (SQLi) DORKS
+# Dorks targeting URLs and pages potentially vulnerable to
+# SQL injection attacks - for authorized testing only
+# ============================================================
+
+# --- Error-Based SQLi Discovery ---
+inurl:"id=" intext:"Warning: mysql_fetch_array()"
+inurl:"id=" intext:"Warning: mysql_fetch_assoc()"
+inurl:"id=" intext:"Warning: mysql_query()"
+inurl:"id=" intext:"Warning: mysql_result()"
+inurl:"id=" intext:"Warning: mysql_num_rows()"
+inurl:"id=" intext:"Warning: pg_exec()"
+inurl:"id=" intext:"Warning: session_start()"
+inurl:"id=" intext:"Warning: Unknown()"
+inurl:"id=" intext:"Warning: array_merge()"
+inurl:"id=" intext:"Warning: filesize()"
+inurl:"id=" intext:"Warning: getimagesize()"
+inurl:"id=" intext:"Warning: is_writable()"
+inurl:"id=" intext:"Warning: preg_match()"
+inurl:"id=" intext:"Warning: require()"
+"Fatal error: Call to undefined function" -reply -the -next
+"mySQL error with query"
+"Invision Power Board Database Error"
+"access denied for user" "using password"
+"Can't connect to local" intitle:warning
+"ORA-00921: unexpected end of SQL command"
+"ORA-00933: SQL command not properly ended"
+"ORA-00936: missing expression"
+"ORA-12541: TNS:no listener" intitle:"error occurred"
+"Fatal NI connect error" ", connecting to:" ext:log
+"PostgreSQL query failed: ERROR: parser: parse error"
+"A syntax error has occurred" filetype:ihtml
+"[SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"
+"Incorrect syntax near"
+"detected an internal error [IBM][CLI Driver][DB2/6000]"
+"Chatologica MetaSearch" "stack tracking"
+"Error Diagnostic Information" intitle:"Error Occurred While"
+"error found handling the request" cocoon filetype:xml
+"An illegal character has been found in the statement"
+
+# --- SQLi Prone URL Parameters ---
+inurl:id= inurl:.php
+inurl:pid= inurl:.php
+inurl:category= inurl:.php
+inurl:cat= inurl:.php
+inurl:action= inurl:.php
+inurl:sid= inurl:.php
+inurl:dir= inurl:.php
+inurl:pageid= inurl:.php
+inurl:item_id= inurl:.php
+inurl:prod_id= inurl:.php
+inurl:catid= inurl:.php
+inurl:bookid= inurl:.php
+
+# --- Common SQLi Vulnerable Paths ---
+index.php?id=
+index.php?page=
+index.php?pageid=
+index.php?section=
+index.php?site=
+index.php?url=
+index.php?w=
+index.php?i=
+index.php?modus=
+index.php?area_id=
+detail.php?id=
+detail.php?prodID=
+details.php?ProdID=
+details.php?prodId=
+product.php?id=
+product.php?pid=
+product.php?sku=
+product.php?shopprodid=
+products.php?cat=
+products.php?act=
+products.php?p=
+product_info.php?products_id=
+product_detail.php?product_id=
+product_details.php?prodid=
+productList.php?cat=
+productlist.php?fid=
+productlist.php?tid=
+product-list.php?id=
+content.php?id=
+content.php?ID=
+content.php?PID=
+content.php?p=
+news.php?id=
+news.php?ID=
+news.php?t=
+article.php?id=
+archive.php?id=
+item.php?id=
+category.php?id=
+category.php?catid=
+categories.php?cat=
+pages.php?id=
+gallery.php?id=
+view.php?cid=
+main.php?id=
+print.php?id=
+print.php?sid=
+rating.php?id=
+general.php?id=
+home.php?cat=
+cart.php?action=
+cart.php?cart_id=
+basket.php?id=
+buy.php?bookid=
+browse.php?catid=
+book.php?id=
+book.php?ID=
+store/product.php?productid=
+shop/index.php?cPath=
+catalog/product.php?pid=
+catalog/product.php?cat_id=
+catalog/main.php?cat_id=
+default.php?cPath=
+forum/profile.php?id=
+rss.php?cat=
+subcategories.php?id=
+software_categories.php?cat_id=
+modules.php?bookid=
+photogallery.php?id=
+updates.php?ID=
+topic.php?ID=
+type.php?iType=
+
+# --- E-Commerce SQLi Paths ---
+about.php?cartID=
+accinfo.php?cartId=
+acclogin.php?cartID=
+add.php?bookid=
+addcart.php?
+addItem.php
+add_cart.php?num=
+addToCart.php?idProduct=
+addtomylist.php?ProdId=
+add-to-cart.php?ID=
+adminEditProductFields.php?intProdID=
+advSearch_h.php?idCategory=
+affiliate.php?ID=
+affiliates.php?id=
+affiliate-agreement.cfm?storeid=
+book_list.php?bookid=
+book_view.php?bookid=
+BookDetails.php?ID=
+Book.php?bookID=
+Browse_Item_Details.php?Store_Id=
+cardinfo.php?card=
+comersus_listCategoriesAndProducts.asp?idCategory=
+comersus_optEmailToFriendForm.asp?idProduct=
+comersus_optReviewReadExec.asp?idProduct=
+comersus_viewItem.asp?idProduct=
+description.php?bookid=
+displayproducts.asp
+emailproduct.asp?itemid=
+emailToFriend.asp?idProduct=
+freedownload.asp?bookid=
+fullDisplay.asp?item=
+giftDetail.asp?id=
+getbook.asp?bookid=
+GetItems.asp?itemid=
+item.asp?eid=
+item.asp?item_id=
+item.asp?itemid=
+item.asp?model=
+item.asp?prodtype=
+item.asp?shopcd=
+itemDesc.asp?CartId=
+itemdetail.asp?item=
+itemdetails.asp?catalogid=
+item_details.asp?catid=
+item_list.asp?maingroup
+item_show.asp?code_no=
+learnmore.asp?cartID=
+listcategoriesandproducts.asp?idCategory=
+modline.asp?id=
+order.asp?id=
+order.asp?item_ID=
+page.asp?PartID=
+payment.asp?CartID=
+pdetail.asp?item_id=
+prev_results.php?prodID=
+StoreRedirect.php?ID=
+viewCart.php?userID=
+viewCat_h.php?idCategory=
+viewPrd.php?idcategory=
+view_cart.php?title=
+view_detail.php?ID=
+view_items.php?id=
+viewcart.php?CartId=
+viewitem.php?recor=
+voteList.php?item_ID=
+whatsnew.php?idCategory=
+WsAncillary.php?ID=
+WsPages.php?ID=
+
+# --- Blog & Forum SQLi ---
+bbs/bbsView.php?id=
+bbs/view.php?no=
+boardView.php?bbs=
+board/board.html?table=
+board/view.php?no=
+kboard/kboard.php?board=
+naboard/memo.php?bd=
+n_replyboard.php?typeboard=
+ourblog.php?categoryid=
+zb/view.php?uid=
+
+# --- Government & Education SQLi ---
+"department" inurl:".php?id=" site:gov
+inurl:".php?id=" site:edu
+inurl:".php?id=" site:mil
+
+# --- High-Confidence SQLi Indicators ---
+inurl:".php?id=" "Warning: mysql_"
+inurl:".php?id=" "You have an error in your SQL syntax"
+inurl:".php?id=" "supplied argument is not a valid MySQL"
+inurl:".php?id=" "mysql_fetch_array()"
+inurl:".asp?id=" "Microsoft OLE DB Provider"
+inurl:".asp?id=" "ODBC Drivers error"
+inurl:".asp?id=" "[Microsoft][ODBC SQL Server Driver]"
+inurl:".jsp?id=" "java.sql.SQLException"
+inurl:".cfm?id=" "ODBC Error"

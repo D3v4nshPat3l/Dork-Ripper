@@ -1,0 +1,116 @@
+# ============================================================
+# HEALTHCARE, FINANCE & CRITICAL INFRASTRUCTURE
+# Dorks for finding exposed systems in regulated industries
+# such as healthcare, banking, and energy sectors
+# ============================================================
+
+# --- Healthcare Systems ---
+intitle:"login" inurl:"epic" "patient"
+intitle:"login" "electronic health record"
+intitle:"login" "EHR"
+intitle:"login" "EMR"
+intitle:"login" "patient portal"
+intitle:"login" inurl:healthcaresystem
+inurl:"/portal/" intitle:"patient" "login"
+filetype:pdf "HIPAA" "protected health information"
+filetype:pdf "patient data" "confidential"
+filetype:xls "patient" "diagnosis"
+filetype:csv "patient" "medical record"
+intext:"patient ID" filetype:csv
+intext:"medical record" filetype:xls
+intitle:"PACS" inurl:login
+intitle:"DICOM" inurl:viewer
+
+# --- Medical Devices ---
+intitle:"Philips" "medical" inurl:login
+intitle:"GE Healthcare" inurl:login
+intitle:"Siemens Healthineers" inurl:login
+intitle:"infusion pump" inurl:login
+intitle:"medical device" "web interface"
+
+# --- Pharmacy Systems ---
+intitle:"pharmacy" inurl:login
+intitle:"prescription" inurl:login
+intext:"pharmacy management" intitle:login
+intext:"drug interaction" inurl:login
+
+# --- Banking & Finance ---
+intitle:"online banking" inurl:login -template
+intitle:"internet banking" inurl:login
+intitle:"net banking" inurl:login
+"login" "secure" intitle:"online banking" -youtube -template
+intitle:"trading platform" inurl:login
+intitle:"forex" inurl:login
+intitle:"stock trading" inurl:login
+intitle:"portfolio" inurl:login "finance"
+intext:"account number" filetype:csv
+intext:"routing number" filetype:xls
+intext:"swift code" filetype:xls
+filetype:pdf "bank statement" "account"
+filetype:pdf "financial statement" "confidential"
+filetype:xls "credit card" "expiry"
+filetype:csv "transaction" "amount" "account"
+
+# --- Payment Systems ---
+intitle:"payment gateway" inurl:login
+intitle:"POS" "point of sale" inurl:login
+intext:"STRIPE_SECRET_KEY" filetype:env
+intext:"STRIPE_PUBLISHABLE_KEY" filetype:env
+intext:"PAYPAL_CLIENT_SECRET" filetype:env
+intext:"BRAINTREE_PRIVATE_KEY" filetype:env
+
+# --- Insurance ---
+intitle:"insurance" "portal" inurl:login
+intitle:"claims" "portal" inurl:login
+filetype:pdf "insurance policy" "confidential"
+filetype:xls "insurance" "policy number"
+
+# --- Energy & Utilities ---
+intitle:"SCADA" "energy" inurl:login
+intitle:"power grid" inurl:login
+intitle:"smart meter" inurl:login
+intitle:"solar" "monitoring" inurl:login
+intitle:"wind turbine" "monitoring"
+intitle:"water treatment" inurl:login
+intitle:"utility" "management" inurl:login
+
+# --- Telecommunications ---
+intitle:"telecom" inurl:login
+intitle:"network management" inurl:login
+intitle:"billing system" inurl:login "telecom"
+intitle:"subscriber" "management" inurl:login
+
+# --- Transportation ---
+intitle:"fleet management" inurl:login
+intitle:"GPS tracking" inurl:login
+intitle:"vehicle tracking" inurl:login
+intitle:"logistics" "management" inurl:login
+intitle:"shipping" "tracking" inurl:login
+
+# --- Manufacturing ---
+intitle:"MES" "manufacturing" inurl:login
+intitle:"ERP" inurl:login
+intitle:"SAP" inurl:login
+intitle:"Oracle EBS" inurl:login
+intitle:"production" "monitoring" inurl:login
+
+# --- Legal Systems ---
+filetype:pdf "privileged and confidential" "attorney"
+filetype:pdf "legal" "confidential" "privileged"
+filetype:doc "attorney-client privilege"
+intitle:"case management" inurl:login
+intitle:"legal" "portal" inurl:login
+
+# --- Real Estate ---
+filetype:xls "property" "mortgage"
+filetype:csv "tenant" "address" "rent"
+intitle:"property management" inurl:login
+intitle:"real estate" "portal" inurl:login
+
+# --- Compliance & Audit ---
+filetype:pdf "SOC 2" "audit report"
+filetype:pdf "PCI DSS" "compliance"
+filetype:pdf "GDPR" "data processing"
+filetype:pdf "ISO 27001" "audit"
+filetype:pdf "penetration test" "report" "confidential"
+filetype:pdf "vulnerability assessment" "report"

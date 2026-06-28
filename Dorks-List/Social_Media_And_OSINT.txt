@@ -1,0 +1,140 @@
+# ============================================================
+# SOCIAL MEDIA & OSINT
+# Dorks for open-source intelligence gathering, social media
+# reconnaissance, and people searching
+# ============================================================
+
+# --- LinkedIn OSINT ---
+site:linkedin.com inurl:in/ "security"
+site:linkedin.com inurl:in/ "penetration tester"
+site:linkedin.com inurl:in/ "CISO"
+site:linkedin.com inurl:in/ "security engineer"
+site:linkedin.com inurl:in/ "devops"
+site:linkedin.com inurl:in/ "sysadmin"
+site:linkedin.com inurl:pub/ "email"
+
+# --- GitHub OSINT ---
+site:github.com "password" filetype:txt
+site:github.com "apikey"
+site:github.com "api_key"
+site:github.com "secret_key"
+site:github.com "access_token"
+site:github.com "client_secret"
+site:github.com "AWS_SECRET_ACCESS_KEY"
+site:github.com "BEGIN RSA PRIVATE KEY"
+site:github.com "PRIVATE KEY"
+site:github.com inurl:.env
+site:github.com filename:.env
+site:github.com filename:wp-config.php
+site:github.com filename:id_rsa
+site:github.com filename:id_dsa
+site:github.com filename:.htpasswd
+
+# --- Pastebin OSINT ---
+site:pastebin.com "password"
+site:pastebin.com "username" "password"
+site:pastebin.com "email" "password"
+site:pastebin.com "login"
+site:pastebin.com "credentials"
+site:pastebin.com "database"
+site:pastebin.com "dump"
+site:pastebin.com intext:"@gmail.com"
+site:pastebin.com "api_key"
+site:pastebin.com "AWS"
+
+# --- Other Paste Sites ---
+site:paste.ee "password"
+site:ghostbin.com "password"
+site:justpaste.it "password"
+site:hastebin.com "password"
+site:dpaste.org "password"
+site:textbin.net "password"
+site:codebeautify.org "password"
+
+# --- Trello OSINT ---
+site:trello.com "password"
+site:trello.com "api_key"
+site:trello.com "credentials"
+site:trello.com "admin"
+site:trello.com "secret"
+site:trello.com "internal"
+
+# --- Slack OSINT ---
+inurl:hooks.slack.com
+site:slack.com "password"
+site:slack.com "api_key"
+
+# --- Discord OSINT ---
+site:discord.com "password"
+site:discord.gg "invite"
+inurl:discord.com/api
+
+# --- Google Drive/Docs ---
+site:drive.google.com "password"
+site:docs.google.com "password"
+site:docs.google.com "confidential"
+site:docs.google.com "internal"
+site:sheets.google.com "password"
+allinurl:drive.google.com/open?id=
+
+# --- OneDrive ---
+site:onedrive.live.com
+site:1drv.ms
+
+# --- Dropbox ---
+site:dropbox.com "password"
+site:dropbox.com/s/ "password"
+inurl:dropbox.com/sh/ "password"
+
+# --- Twitter/X OSINT ---
+site:twitter.com "password" "leaked"
+site:twitter.com "data breach"
+site:twitter.com inurl:status "password"
+
+# --- Reddit OSINT ---
+site:reddit.com "password leak"
+site:reddit.com "data breach"
+site:reddit.com "exposed database"
+site:reddit.com "google dork"
+
+# --- Stack Overflow ---
+site:stackoverflow.com "password" "hardcoded"
+site:stackoverflow.com "api_key" "exposed"
+
+# --- Public Code Repositories ---
+site:gitlab.com "password"
+site:gitlab.com "api_key"
+site:gitlab.com "secret_key"
+site:bitbucket.org "password"
+site:bitbucket.org "api_key"
+site:codeberg.org "password"
+site:sourcegraph.com "password"
+
+# --- Domain & Email OSINT ---
+site:whois.domaintools.com
+site:who.is
+site:dnsdumpster.com
+site:shodan.io
+site:censys.io
+site:zoomeye.org
+site:hunter.io
+
+# --- People Search ---
+intitle:"curriculum vitae" "email" "phone"
+intitle:"resume" "email" "phone" filetype:pdf
+intitle:"about me" "email" "phone"
+"phone * * *" "address *" "e-mail" intitle:"curriculum vitae"
+
+# --- Image OSINT ---
+inurl:images intitle:"index of"
+inurl:photos intitle:"index of"
+inurl:pictures intitle:"index of"
+intitle:"index of" "dcim"
+intitle:"index of" "100MEDIA"
+
+# --- Document Repositories ---
+intitle:"index of" filetype:pdf "confidential"
+intitle:"index of" filetype:doc "internal"
+intitle:"index of" filetype:xls "password"
+inurl:sharepoint inurl:documents
+inurl:confluence inurl:pages

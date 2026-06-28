@@ -1,0 +1,140 @@
+# ============================================================
+# ERROR MESSAGES & DEBUGGING
+# Dorks for finding exposed error messages, debug pages,
+# stack traces, and verbose error output
+# ============================================================
+
+# --- PHP Errors ---
+"Fatal error" "on line"
+"Fatal error: Call to undefined function" -reply -the -next
+"Parse error: parse error, unexpected T_VARIABLE" "on line" filetype:php
+"Fatal error" "Call to" "on line"
+"Warning: mysql_connect()" "on line"
+"Warning: mysql_query()" "on line"
+"Warning: mysql_fetch_array()" "on line"
+"Warning: mysql_fetch_assoc()" "on line"
+"Warning: mysql_num_rows()" "on line"
+"Warning: mysql_result()" "on line"
+"Warning: pg_exec()" "on line"
+"Warning: session_start()" "on line"
+"Warning: passthru()" "on line"
+"Warning: require()" "on line"
+"Warning: include()" "on line"
+"Warning: filesize()" "on line"
+"Warning: getimagesize()" "on line"
+"Warning: is_writable()" "on line"
+"Warning: preg_match()" "on line"
+"Warning: Unknown()" "on line"
+"Warning: array_merge()" "on line"
+"Cannot use a scalar value as an array in" "on line"
+"[function.getimagesize]: failed to open stream"
+"PHP Fatal error: require()" ext:log
+intext:"Notice: Undefined" "on line"
+intext:"Warning: " "on line" filetype:php
+
+# --- SQL Errors ---
+"mySQL error with query"
+"You have an error in your SQL syntax"
+"supplied argument is not a valid MySQL"
+"Invision Power Board Database Error"
+"access denied for user" "using password"
+"Can't connect to local" intitle:warning
+"ORA-00921: unexpected end of SQL command"
+"ORA-00933: SQL command not properly ended"
+"ORA-00936: missing expression"
+"ORA-12541: TNS:no listener" intitle:"error occurred"
+"Fatal NI connect error" ", connecting to:" ext:log
+"PostgreSQL query failed: ERROR: parser: parse error"
+"[SQL Server Driver][SQL Server]Line 1: Incorrect syntax near"
+"Incorrect syntax near"
+"detected an internal error [IBM][CLI Driver][DB2/6000]"
+"An illegal character has been found in the statement"
+"Microsoft OLE DB Provider for SQL Server"
+"ODBC Drivers error"
+"[Microsoft][ODBC SQL Server Driver]"
+"java.sql.SQLException"
+"ODBC Error"
+
+# --- Application Framework Errors ---
+"CakeRoutingException" -site:github.com -site:stackoverflow.com -site:cakephp.org
+"Exception" "stack trace"
+"error found handling the request" cocoon filetype:xml
+"A syntax error has occurred" filetype:ihtml
+"Error Diagnostic Information" intitle:"Error Occurred While"
+"Chatologica MetaSearch" "stack tracking"
+"Internal Server Error" "server at"
+"Below is a rendering of the page up to the first error." ext:xml
+
+# --- ASP.NET Errors ---
+"Server Error in '/' Application"
+"Runtime Error" "Description: An application error"
+"The page cannot be displayed" "aspx"
+intitle:"Server Error" "Application"
+intitle:"Runtime Error" "Server Error"
+
+# --- Java/JSP Errors ---
+"java.lang.NullPointerException"
+"javax.servlet.ServletException"
+"org.apache.jasper.JasperException"
+"Struts Problem Report"
+intitle:"Apache Tomcat" "error report"
+"java.sql.SQLException"
+
+# --- Python Errors ---
+intitle:"Traceback (most recent call last)"
+"Django" "TemplateSyntaxError"
+"Django" "Debug" "Traceback"
+"Flask" "Traceback" "most recent call last"
+intitle:"Werkzeug Debugger"
+
+# --- Ruby/Rails Errors ---
+"ActionController::RoutingError"
+"ActiveRecord::RecordNotFound"
+intitle:"Action Controller: Exception Caught"
+"Rails" "Error" "Stacktrace"
+
+# --- Node.js Errors ---
+"TypeError" "Cannot read property"
+"ReferenceError" "is not defined" "at"
+"Error: Cannot find module"
+intitle:"Error" "Express" "NodeJS"
+
+# --- Debug Pages & Info ---
+inurl:debug
+inurl:debug.php
+inurl:debug.log
+inurl:phpinfo.php
+"PHP Version" inurl:phpinfo
+"dispatch=debugger."
+"Consola de Joomla! Debug"
+"HTTP_FROM=googlebot" googlebot.com "Server_Software="
+inurl:server-status "Apache"
+inurl:server-info "Apache"
+"InnoDB:" ext:log
+
+# --- Error Page Information Leaks ---
+"server at" "port" intitle:"error"
+"Microsoft-IIS" "server at"
+intitle:"404 Not Found" "nginx"
+intitle:"403 Forbidden" "nginx"
+intitle:"502 Bad Gateway" "nginx"
+intitle:"500 Internal Server Error" "server"
+
+# --- ColdFusion Errors ---
+"Error Occurred While Processing Request"
+intitle:"Error Occurred" "The following information"
+"ColdFusion" "Error" "on line"
+
+# --- WordPress Debug ---
+inurl:wp-content/debug.log
+"error_log" inurl:/wp-content
+"WordPress database error"
+"WP_DEBUG"
+
+# --- Security Scan Reports ---
+":: Arachni Web Application Security Report"
+"IBM Security AppScan Report" ext:pdf
+"havij report" "Target" ext:html
+"Host Vulnerability Summary Report"
+"Network Vulnerability Assessment Report"
+"Network Host Assessment Report" "Internet Scanner"

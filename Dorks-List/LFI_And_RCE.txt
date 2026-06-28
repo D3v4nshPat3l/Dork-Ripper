@@ -1,0 +1,127 @@
+# ============================================================
+# LOCAL FILE INCLUSION (LFI) & REMOTE CODE EXECUTION (RCE)
+# Dorks for discovering potential LFI and RCE vulnerabilities
+# ============================================================
+
+# --- LFI Prone Parameters ---
+inurl:include= inurl:.php
+inurl:dir= inurl:.php
+inurl:detail= inurl:.php
+inurl:file= inurl:.php
+inurl:folder= inurl:.php
+inurl:inc= inurl:.php
+inurl:locate= inurl:.php
+inurl:doc= inurl:.php
+inurl:conf= inurl:.php
+inurl:path= inurl:.php
+inurl:pg= inurl:.php
+inurl:style= inurl:.php
+inurl:pdf= inurl:.php
+inurl:template= inurl:.php
+inurl:display= inurl:.php
+inurl:show= inurl:.php
+inurl:read= inurl:.php
+
+# --- Common LFI Patterns ---
+inurl:".php?page=" site:*
+inurl:".php?file=" site:*
+inurl:".php?include=" site:*
+inurl:".php?path=" site:*
+inurl:".php?template=" site:*
+inurl:".php?content=" site:*
+inurl:".php?module=" site:*
+inurl:".php?doc=" site:*
+inurl:".php?load=" site:*
+inurl:".php?view=" site:*
+inurl:".php?open=" site:*
+inurl:".php?lang=" site:*
+inurl:".php?dir=" site:*
+inurl:".php?pg=" site:*
+inurl:".php?pagina=" site:*
+inurl:".php?seite=" site:*
+
+# --- Path Traversal Indicators ---
+inurl:".php?" inurl:"../"
+inurl:".php?" inurl:"%2e%2e"
+inurl:".php?" inurl:"/etc/passwd"
+inurl:".php?" inurl:"/etc/shadow"
+inurl:".php?" inurl:"/proc/self"
+inurl:".php?" inurl:"win.ini"
+inurl:".php?" inurl:"boot.ini"
+
+# --- Specific LFI Vulnerable Apps ---
+"index.php?body="
+"index.php?canal="
+"index.php?go="
+"index.php?langc="
+"index.php?Language="
+"index.php?screen="
+"index.php?section=post_upload"
+"index1.php?choix="
+"index1.php?menu="
+"index2.php?ascii_seite="
+"index2.php?DoAction="
+"index2.php?p="
+"pages.php?page="
+"pages.php?page_ID=" "K9 Kreativity"
+"folder.php?id="
+"lib/gore.php?libpath="
+"kb_constants.php?module_root_path="
+
+# --- RCE Prone Parameters ---
+inurl:cmd= inurl:.php
+inurl:exec= inurl:.php
+inurl:code= inurl:.php
+inurl:do= inurl:.php
+inurl:run= inurl:.php
+inurl:read= inurl:.php
+inurl:ping= inurl:.php
+inurl:execute= inurl:.php
+inurl:system= inurl:.php
+inurl:eval= inurl:.php
+inurl:shell= inurl:.php
+inurl:command= inurl:.php
+
+# --- PHP Info / Code Injection ---
+"intext:Warning: passthru()" "inurl:view=help"
+"Parse error: parse error, unexpected T_VARIABLE" "on line" filetype:php
+"Fatal error: Call to undefined function"
+"PHP Fatal error: require()" ext:log
+
+# --- Ping / Traceroute Interfaces ---
+"Enter ip" inurl:"php-ping.php"
+intitle:"ping" inurl:ping.php
+intitle:"traceroute" inurl:traceroute.php
+inurl:shell.php "command"
+inurl:cmd.php "command"
+
+# --- File Upload Vulnerabilities ---
+"index of /" (upload.cfm | upload.asp | upload.php | upload.cgi | upload.jsp | upload.pl)
+"File Upload Manager v1.3" "rename to"
+"Instant Free File Uploader"
+"MobPartner Counter" "upload files"
+inurl:upload.php
+inurl:fileupload.php
+inurl:file_upload.php
+inurl:uploadfile.php
+intitle:"Upload" inurl:upload.php
+intitle:"File Upload" inurl:upload
+
+# --- Server-Side Template Injection (SSTI) ---
+inurl:template= inurl:.php
+inurl:tpl= inurl:.php
+inurl:render= inurl:.php
+inurl:engine= inurl:.php
+
+# --- XML External Entity (XXE) ---
+filetype:xml "ENTITY"
+filetype:xml "SYSTEM"
+filetype:dtd inurl:xml
+inurl:xmlrpc.php
+inurl:xml-rpc
+inurl:soap inurl:wsdl
+
+# --- Deserialization ---
+inurl:".php?" inurl:serialize
+inurl:".php?" inurl:object
+inurl:viewstate inurl:.aspx

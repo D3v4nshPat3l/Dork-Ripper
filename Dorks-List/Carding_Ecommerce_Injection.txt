@@ -1,0 +1,315 @@
+# ============================================================
+# CARDING & E-COMMERCE INJECTION DORKS
+# Dorks targeting e-commerce product pages, shopping carts,
+# checkout processes, and payment handling endpoints
+# For authorized PCI-DSS compliance testing only
+# ============================================================
+
+# --- Checkout & Cart URL Patterns ---
+inurl:checkout.php?cartid=
+inurl:checkout.asp?cartid=
+inurl:checkout.cfm?cartid=
+inurl:checkout.php?UserID=
+inurl:checkout.asp?UserID=
+inurl:checkout.cfm?UserID=
+inurl:checkout1.php?cartid=
+inurl:checkout1.asp?cartid=
+inurl:checkout1.cfm?cartid=
+inurl:checkout_confirmed.php?order_id=
+inurl:checkout_confirmed.asp?order_id=
+inurl:checkout_confirmed.cfm?order_id=
+inurl:viewcart.cfm?CartId=
+inurl:shopcart.php?title=
+inurl:shopcreatorder.cfm
+inurl:shopaddtocart.cfm
+inurl:shopping_basket.php?cartID=
+inurl:privacy.php?cartID=
+inurl:contact.php?cartId=
+inurl:itemDesc.php?CartId=
+inurl:itemDesc.asp?CartId=
+inurl:itemDesc.cfm?CartId=
+
+# --- Product Page Injection Points ---
+inurl:product.php?id=
+inurl:product.php?pid=
+inurl:product.php?productid=
+inurl:product.php?product_id=
+inurl:product.php?cat=
+inurl:product.php?sku=
+inurl:product.php?ItemId=
+inurl:product.php?bid=
+inurl:product.php?bookID=
+inurl:product.php?brand=
+inurl:product.php?cat_id=
+inurl:product.php?intProdID=
+inurl:product.php?intProductID=
+inurl:product.php?prodid=
+inurl:product.php?proid=
+inurl:product.php?rangeid=
+inurl:product.php?shopprodid=
+inurl:product.php?prod_num=
+inurl:product.php?fdProductId=
+inurl:product.asp?id=
+inurl:product.asp?pid=
+inurl:product.asp?productid=
+inurl:product.asp?product_id=
+inurl:product.asp?cat=
+inurl:product.asp?sku=
+inurl:product.asp?ItemID=
+inurl:product.asp?bid=
+inurl:product.asp?bookID=
+inurl:product.asp?intProdID=
+inurl:product.asp?prodid=
+inurl:product.asp?prd=
+inurl:product.asp?shopprodid=
+
+# --- Product Detail Pages ---
+inurl:product_detail.php?id=
+inurl:product_detail.php?prodid=
+inurl:product_detail.php?product_id=
+inurl:product_detail.asp?product_id=
+inurl:product_detail.cfm?id=
+inurl:product_details.php?id=
+inurl:product_details.php?prodID=
+inurl:product_details.php?product_id=
+inurl:product_details.asp?id=
+inurl:product_details.asp?prodid=
+inurl:product_details.asp?product_id=
+inurl:productDetail.php?prodId=
+inurl:productDetails.php?idProduct=
+inurl:productDetails.asp?idProduct=
+inurl:productDetails.cfm?idProduct=
+inurl:product_info.php?products_id=
+inurl:product_info.asp?products_id=
+inurl:product_info.asp?item_id=
+inurl:productinfo.php?id=
+inurl:productinfo.cfm?item=
+inurl:prod_detail.php?id=
+inurl:prod_info.php?id=
+inurl:prod_details.php?id=
+inurl:prod_details.php?products_id=
+inurl:prod_show.asp?id=
+inurl:prod_show.asp?prodid=
+inurl:product-detail.php?prodid=
+inurl:product-details.php?prodID=
+inurl:product-item.php?id=
+inurl:product-info.php?cat=
+inurl:product-list.php?id=
+inurl:product-list.php?cid=
+inurl:product-list.php?category_id=
+inurl:product-list.asp?id=
+inurl:product-list.asp?cid=
+inurl:product-list.asp?category_id=
+inurl:product-range.php?rangeID=
+inurl:product-range.asp?rangeID=
+
+# --- Product List & Category ---
+inurl:productList.php?cat=
+inurl:productList.php?id=
+inurl:productList.asp?cat=
+inurl:prodlist.php?catid=
+inurl:prodlist.asp?catid=
+inurl:prodlist.cfm?catid=
+inurl:prodbycat.php?intCatalogID=
+inurl:prodbycat.asp?intCatalogID=
+inurl:prodbycat.cfm?intCatalogID=
+inurl:productDisplay.php
+inurl:productDisplay.asp
+inurl:productDisplay.cfm
+inurl:products_category.php?CategoryID=
+inurl:productlist.asp?id=
+inurl:product_customed.php?pid=
+
+# --- Item Pages ---
+inurl:item.php?id=
+inurl:item.php?item_id=
+inurl:item.php?itemid=
+inurl:item.php?cat=
+inurl:item.php?code=
+inurl:item.php?eid=
+inurl:item.php?iid=
+inurl:item.php?item=
+inurl:item.php?model=
+inurl:item.php?prodtype=
+inurl:item.php?shopcd=
+inurl:item.php?sub_id=
+inurl:item.php?SKU=
+inurl:item.asp?id=
+inurl:item.asp?item_id=
+inurl:item.asp?itemid=
+inurl:item.asp?eid=
+inurl:item.asp?iid=
+inurl:item.asp?model=
+inurl:item.asp?prodtype=
+inurl:item.asp?shopcd=
+inurl:item.asp?sub_id=
+inurl:item_details.php?catid=
+inurl:item_details.asp?catid=
+inurl:item_details.cfm?catid=
+inurl:item_book.php?CAT=
+inurl:item_book.asp?CAT=
+inurl:item_list.php?cat_id=
+inurl:item_list.asp?cat_id=
+inurl:item_show.php?id=
+inurl:item_show.php?code_no=
+inurl:item_show.php?itemID=
+inurl:item_show.php?lid=
+inurl:item_show.asp?id=
+inurl:item_show.asp?code_no=
+inurl:item_show.asp?lid=
+inurl:itemdetail.php?item=
+inurl:itemdetail.asp?item=
+inurl:itemdetail.cfm?item=
+inurl:itemdetails.php?catalogid=
+inurl:itemdetails.asp?catalogid=
+inurl:itemdetails.cfm?catalogid=
+inurl:itemlist.php?categoryID=
+
+# --- Order Pages ---
+inurl:order.php?id=
+inurl:order.php?BookID=
+inurl:order.php?item_ID=
+inurl:order.asp?id=
+inurl:order.asp?BookID=
+inurl:order.asp?item_ID=
+inurl:order.asp?lotid=
+inurl:order.cfm?id=
+inurl:order.cfm?BookID=
+inurl:order.cfm?item_ID=
+inurl:order-now.php?prodid=
+
+# --- Shop Pages ---
+inurl:shop.php?do=part&id=
+inurl:shop.php?action=
+inurl:shop.asp?action=
+inurl:shop_category.php?id=
+inurl:shopping.php?id=
+inurl:shop_display_products.php?cat_id=
+inurl:shop/category.php?cat_id=
+inurl:shop/home.php?cat=
+inurl:store/view_items.php?id=
+inurl:store/home.php?cat=
+inurl:store/store.php?cat_id=
+inurl:store/store_detail.php?id=
+inurl:store/showcat.php?cat_id=
+
+# --- Eshop & Gift Pages ---
+inurl:eshop.php?id=
+inurl:estore/products.php?cat=
+inurl:giftDetail.php?id=
+inurl:giftDetail.asp?id=
+inurl:giftDetail.cfm?id=
+inurl:giftshop/product.php?proid=
+
+# --- Book & Catalog ---
+inurl:getbook.php?bookid=
+inurl:getbook.asp?bookid=
+inurl:getbook.cfm?bookid=
+inurl:Book.php?bookID=
+inurl:Book.cfm?bookID=
+inurl:book.php?isbn=
+inurl:book.php?id=
+
+# --- View Pages ---
+inurl:view_product.php?id=
+inurl:view_items.php?id=
+inurl:view_item.php?id=
+inurl:prodView.php?idProduct=
+inurl:prodView.asp?idProduct=
+inurl:prodView.cfm?idProduct=
+inurl:proddetail.php?prod=
+inurl:proddetails_print.php?prodid=
+inurl:prodetails.php?prodid=
+inurl:prodetails.asp?prodid=
+inurl:prodetails.cfm?prodid=
+inurl:prodrev.php?cat=
+
+# --- Goods & Catalog ---
+inurl:goods_detail.php?data=
+inurl:goods_detail.php?goodsIdx=
+inurl:goods_detail.asp?data=
+inurl:goods.php?catId=
+inurl:catalog.cfm?CatalogID=
+
+# --- Regional / International Patterns ---
+inurl:produit.php?id=
+inurl:prodotti.php?id_cat=
+inurl:prodotti.asp?id_cat=
+inurl:kshop/product.php?productid=
+inurl:kshop/product.asp?productid=
+inurl:kshop/home.php?cat=
+inurl:kr/product/product.php?gubun=
+inurl:global/product/product.php?gubun=
+inurl:global/product/product.asp?gubun=
+
+# --- Cart Database Files ---
+inurl:db/CART/product_details.php?product_id=
+inurl:db/CART/product_details.asp?product_id=
+
+# --- Credit Card Logs & Data Files ---
+/cgi-bin/store/Admin_files/your_order.log
+/cgi-bin/shop.cgi
+/cgibin/orders/orders.txt
+/cgi-win/shop/orders/orders.txt
+/config/datasources/cvv2.mdb
+/shopping/shopadmin.asp
+/store/shopdbtest.asp
+/merchant/shopdbtest.asp
+/Admin_files/ccelog.txt
+/ccbill/secure/ccbill.log
+/cgi-bin/shopper.cgi&TEMPLATE=ORDER.LOG
+/logs/access_log
+/password.txt
+/cgibin/password.txt
+/cgi-local/cart32.exe
+
+# --- Shopping Cart Injection Patterns ---
+inurl:".php?cat=" intext:"shopping"
+inurl:buy.php?id= intext:"shopping" site:us
+inurl:buy.php?catid= intext:"login"
+inurl:buy.php?category= intext:"paypal"
+inurl:buy.php?id= intitle:"buy now"
+inurl:buy.php?catid= intext:"signup"
+inurl:buy.php?categoryid= intitle:"add to cart"
+
+# --- Category/Product Search Injection ---
+inurl:".php?categoryid=" intext:"Buy Now"
+inurl:".php?catid=" intitle:"purchase"
+inurl:".php?cid=" intext:"login"
+inurl:".php?cid=" intext:"shop"
+inurl:".php?category=" intext:"business"
+inurl:".php?categoryid=" intitle:"business"
+
+# --- E-Commerce Content Patterns ---
+inurl:content.php?catoid=
+inurl:content.asp?contentid=
+inurl:content.cfm?id=
+inurl:content.php?cID=
+inurl:content.asp?page_id=
+inurl:content.aspx?productId=
+inurl:content.php?pageid=
+inurl:default.php?cPath=
+inurl:default.asp?contentID=
+inurl:default.aspx?id=
+
+# --- Miscellaneous E-Commerce ---
+inurl:show_an.php?id=
+inurl:show.php?id=
+inurl:show.php?page=
+inurl:stockists_list.php?area_id=
+inurl:shopreviewlist.php?id=
+inurl:shopdc.php?bookid=
+inurl:showfeature.asp?id=
+inurl:x/product.php?productid=
+inurl:detail.php?id=
+inurl:detail.asp?id=
+inurl:detail.php?prodID=
+inurl:detail.php?cat_id=
+inurl:detail.php?item_id=
+inurl:show_prod.php?p=
+inurl:products.php?cat=
+inurl:products.php?p=
+inurl:products.php?DepartmentID=
+inurl:products.asp?cat_id=
+inurl:products.asp?catid=
+inurl:products.asp?DepartmentID=
