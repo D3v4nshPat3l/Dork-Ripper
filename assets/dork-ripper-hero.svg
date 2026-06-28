@@ -1,0 +1,65 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dork Ripper hero banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#02070d"/><stop offset="0.55" stop-color="#06131d"/><stop offset="1" stop-color="#020706"/></linearGradient>
+    <linearGradient id="cyanGreen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#20e7ff"/><stop offset="0.52" stop-color="#20f0ff"/><stop offset="1" stop-color="#72ff3a"/></linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#081b27" stop-opacity="0.98"/><stop offset="1" stop-color="#02060b" stop-opacity="0.98"/></linearGradient>
+    <filter id="glowC"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowG"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity="0.75"/></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#103341" stroke-width="1" opacity="0.24"/></pattern>
+    <radialGradient id="radar" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#64ff37" stop-opacity="0.42"/><stop offset="0.65" stop-color="#11e7ff" stop-opacity="0.12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)" opacity="0.45"/>
+  <circle cx="960" cy="540" r="520" fill="url(#radar)" opacity="0.45"/>
+  <g opacity="0.52" stroke="#16e8ff" stroke-width="2" fill="none">
+    <path d="M70 170 C220 80, 290 250, 430 155 S725 110, 835 210"/>
+    <path d="M1130 180 C1265 85, 1375 260, 1510 145 S1720 115, 1848 220"/>
+    <path d="M90 830 H500 L548 785 H1372 L1420 830 H1830" opacity="0.5"/>
+  </g>
+  <g opacity="0.55" fill="#10e9ff">
+    <circle cx="70" cy="170" r="7"/><circle cx="430" cy="155" r="6"/><circle cx="835" cy="210" r="5"/><circle cx="1130" cy="180" r="5"/><circle cx="1510" cy="145" r="7"/><circle cx="1848" cy="220" r="6"/>
+  </g>
+  <g transform="translate(960 138)" filter="url(#glowC)">
+    <circle r="82" fill="#03121a" stroke="#1feaff" stroke-width="3" opacity="0.9"/>
+    <path d="M-46 30 C-40 -28,-12 -62,0 -68 C12 -62,40 -28,46 30 C28 4,11 -3,0 -3 C-11 -3,-28 4,-46 30Z" fill="#061a24" stroke="#23e6ff" stroke-width="5"/>
+    <path d="M-30 8 Q-12 17 0 10 Q12 17 30 8" fill="none" stroke="#75ff54" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-78 0 H-116 M78 0 H116 M0 -78 V-116 M0 78 V116" stroke="#36ff7c" stroke-width="4"/>
+  </g>
+  <text x="960" y="390" text-anchor="middle" font-family="Orbitron, Rajdhani, Segoe UI, Arial, sans-serif" font-size="150" font-weight="900" letter-spacing="2" fill="url(#cyanGreen)" filter="url(#glowG)">Dork Ripper</text>
+  <text x="960" y="480" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="#ecfbff"><tspan fill="#20e7ff">12,000+</tspan> Categorized Search Dorks</text>
+  <text x="960" y="555" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="4" fill="#d8f7ff">AUTHORIZED RECON  •  OSINT  •  BUG BOUNTY  •  RESEARCH</text>
+  <g transform="translate(85 340)" filter="url(#shadow)">
+    <rect x="0" y="0" width="390" height="68" rx="34" fill="#03131d" stroke="#20e7ff" stroke-width="3" filter="url(#glowC)"/>
+    <text x="32" y="44" font-family="Consolas, Monaco, monospace" font-size="24" fill="#64f7ff">site:example.com intitle:&quot;index of&quot;</text>
+    <circle cx="405" cy="24" r="54" fill="none" stroke="#cbefff" stroke-width="13" opacity="0.86"/>
+    <line x1="443" y1="62" x2="520" y2="136" stroke="#d8fbff" stroke-width="17" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  <g transform="translate(125 560)" font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <g><rect width="370" height="78" rx="14" fill="url(#panel)" stroke="#20e7ff" stroke-width="2"/><text x="98" y="34" font-size="28" font-weight="800" fill="#fff">Web</text><text x="98" y="63" font-size="19" fill="#20e7ff">2,450+ Dorks</text><path d="M28 29 h38 l14 14 v23 h-52z" fill="none" stroke="#20e7ff" stroke-width="5"/></g>
+    <g transform="translate(0 98)"><rect width="370" height="78" rx="14" fill="url(#panel)" stroke="#72ff3a" stroke-width="2"/><text x="98" y="34" font-size="28" font-weight="800" fill="#fff">Files &amp; Directories</text><text x="98" y="63" font-size="19" fill="#72ff3a">1,850+ Dorks</text><path d="M28 29 h38 l14 14 v23 h-52z" fill="none" stroke="#72ff3a" stroke-width="5"/></g>
+    <g transform="translate(0 196)"><rect width="370" height="78" rx="14" fill="url(#panel)" stroke="#ffc400" stroke-width="2"/><text x="98" y="34" font-size="28" font-weight="800" fill="#fff">Databases</text><text x="98" y="63" font-size="19" fill="#ffc400">1,650+ Dorks</text><ellipse cx="48" cy="31" rx="24" ry="9" fill="none" stroke="#ffc400" stroke-width="5"/><path d="M24 31 v30 c0 7 48 7 48 0 v-30" fill="none" stroke="#ffc400" stroke-width="5"/></g>
+  </g>
+  <g transform="translate(1485 300)" filter="url(#shadow)">
+    <rect width="350" height="245" rx="16" fill="#02080c" stroke="#20e7ff" stroke-width="2" opacity="0.95"/>
+    <circle cx="31" cy="28" r="7" fill="#ff5364"/><circle cx="54" cy="28" r="7" fill="#ffd44d"/><circle cx="77" cy="28" r="7" fill="#72ff3a"/>
+    <text x="32" y="78" font-family="Consolas, Monaco, monospace" font-size="18" fill="#72ff3a">dorkripper ~ recon</text>
+    <text x="32" y="117" font-family="Consolas, Monaco, monospace" font-size="17" fill="#20e7ff">&gt; scan --category panels</text>
+    <text x="32" y="154" font-family="Consolas, Monaco, monospace" font-size="17" fill="#dffcff">✓ Scanning indexed sources</text>
+    <text x="32" y="184" font-family="Consolas, Monaco, monospace" font-size="17" fill="#dffcff">✓ Filtering &amp; deduplicating</text>
+    <text x="32" y="214" font-family="Consolas, Monaco, monospace" font-size="17" fill="#72ff3a">✓ Results ready</text>
+  </g>
+  <g transform="translate(1465 635)" filter="url(#glowC)">
+    <path d="M160 0 L280 48 V178 C280 248 220 315 160 340 C100 315 40 248 40 178 V48Z" fill="#06202b" stroke="#20e7ff" stroke-width="10"/>
+    <path d="M116 154 V115 C116 88 137 66 160 66 C183 66 204 88 204 115 V154" fill="none" stroke="#72ff3a" stroke-width="14" stroke-linecap="round"/>
+    <rect x="103" y="150" width="114" height="92" rx="16" fill="#55f72e" opacity="0.92"/>
+    <path d="M134 194 l20 20 l45 -54" fill="none" stroke="#06202b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(565 730)" font-family="Segoe UI, Arial, sans-serif" filter="url(#shadow)">
+    <rect width="790" height="190" rx="24" fill="url(#panel)" stroke="#20e7ff" stroke-width="2" opacity="0.88"/>
+    <g transform="translate(85 42)"><circle cx="45" cy="45" r="36" fill="none" stroke="#20e7ff" stroke-width="6"/><text x="45" y="128" text-anchor="middle" font-size="23" font-weight="900" fill="#20e7ff">FOCUSED</text></g>
+    <g transform="translate(280 42)"><path d="M25 18 h70 L64 62 v37 L56 107 L48 99 V62Z" fill="none" stroke="#72ff3a" stroke-width="7"/><text x="60" y="128" text-anchor="middle" font-size="23" font-weight="900" fill="#72ff3a">CATEGORIZED</text></g>
+    <g transform="translate(480 42)"><path d="M65 6 L28 70 H60 L45 116 L97 48 H65Z" fill="none" stroke="#ffc400" stroke-width="7"/><text x="62" y="128" text-anchor="middle" font-size="23" font-weight="900" fill="#ffc400">FAST</text></g>
+    <g transform="translate(665 42)"><path d="M45 5 L82 22 V58 C82 88 62 108 45 116 C28 108 8 88 8 58 V22Z" fill="none" stroke="#20e7ff" stroke-width="6"/><path d="M27 58 l15 15 l28 -38" fill="none" stroke="#72ff3a" stroke-width="7"/><text x="45" y="128" text-anchor="middle" font-size="23" font-weight="900" fill="#20e7ff">RESPONSIBLE</text></g>
+  </g>
+</svg>

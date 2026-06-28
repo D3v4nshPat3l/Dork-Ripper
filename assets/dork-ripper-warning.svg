@@ -1,0 +1,22 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dork Ripper warning graphic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080507"/><stop offset="1" stop-color="#02070b"/></linearGradient>
+    <linearGradient id="warning" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff032"/><stop offset="0.45" stop-color="#ff9a16"/><stop offset="1" stop-color="#ff2455"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#41170f" stroke-width="1" opacity="0.34"/></pattern>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c0a0b"/><stop offset="1" stop-color="#030506"/></linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+  <g opacity="0.55" stroke="#ff5a24" stroke-width="2" fill="none"><path d="M100 185 C270 75 420 270 610 145 S850 150 960 90 S1310 80 1480 190 S1725 120 1825 220"/><path d="M105 895 H590 L630 855 H1290 L1330 895 H1810"/></g>
+  <g transform="translate(885 105)" filter="url(#glow)"><path d="M75 0 L150 135 H0Z" fill="none" stroke="#ffb000" stroke-width="16" stroke-linejoin="round"/><text x="75" y="105" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="105" font-weight="900" fill="#ff3b30">!</text></g>
+  <text x="960" y="370" text-anchor="middle" font-family="Orbitron, Rajdhani, Segoe UI, Arial, sans-serif" font-size="155" font-weight="950" fill="url(#warning)" filter="url(#glow)">Warning</text>
+  <g transform="translate(420 430)" filter="url(#glow)"><rect width="1080" height="120" rx="22" fill="#0a0708" stroke="#ff314e" stroke-width="4"/><text x="540" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="850" fill="#f5f7fb">Unauthorized use is <tspan fill="#ff314e">illegal</tspan> and <tspan fill="#ff314e">unethical</tspan>.</text></g>
+  <g transform="translate(455 625)" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="750" fill="#f8fbff">
+    <rect width="1010" height="250" rx="22" fill="url(#panel)" stroke="#ff9a16" stroke-width="3"/>
+    <g transform="translate(45 35)"><circle cx="32" cy="32" r="25" fill="none" stroke="#ff314e" stroke-width="6"/><path d="M32 0 v64 M0 32 h64" stroke="#ff314e" stroke-width="4"/><text x="115" y="43">Do not target third-party systems without permission</text></g>
+    <g transform="translate(45 112)"><path d="M32 0 L64 15 V48 C64 72 44 88 32 94 C20 88 0 72 0 48 V15Z" fill="none" stroke="#ff5140" stroke-width="6"/><text x="115" y="52">The repository author assumes no liability for misuse</text></g>
+    <g transform="translate(45 188)"><path d="M20 20 h70 M55 0 v64 M18 36 l-18 38 h36z M92 36 l-18 38 h36z" fill="none" stroke="#ff9a16" stroke-width="5"/><text x="115" y="44">You are responsible for complying with applicable laws and policies</text></g>
+  </g>
+  <g transform="translate(1450 610)" filter="url(#glow)"><path d="M145 0 L260 52 V180 C260 245 202 305 145 333 C88 305 30 245 30 180 V52Z" fill="#17070a" stroke="#ff334e" stroke-width="10"/><path d="M145 72 L213 195 H77Z" fill="none" stroke="#ffb000" stroke-width="12" stroke-linejoin="round"/><text x="145" y="178" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="92" font-weight="900" fill="#ff3b30">!</text></g>
+  <g transform="translate(275 925)" filter="url(#glow)"><rect width="1370" height="80" rx="40" fill="#07080b" stroke="#ff9a16" stroke-width="2" opacity="0.94"/><text x="685" y="52" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="850" fill="#f7f7f7">Use this repository only in <tspan fill="#ffb000">legal, ethical, authorized</tspan> environments.</text></g>
+</svg>
