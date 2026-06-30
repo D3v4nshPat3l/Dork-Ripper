@@ -6,7 +6,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Dorks-12%2C043-blue?logo=google&style=for-the-badge" alt="Dorks Count">
-  <img src="https://img.shields.io/badge/Files-47-orange?style=for-the-badge" alt="Files">
+  <img src="https://img.shields.io/badge/Files-48-orange?style=for-the-badge" alt="Files">
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
 </p>
 
